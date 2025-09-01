@@ -5,10 +5,14 @@ using UnityEngine;
 public class CS_PlayerController : MonoBehaviour
 {
     [SerializeField] private int _speed;
+    [SerializeField] private Animator _anim;
+    [SerializeField] private SpriteRenderer _playerSprite;
 
     private PlayerControls _playerControls;
     private Rigidbody _rb;
     private Vector3 _movement;
+
+    private const string IS_WALKING_PARAM = "IsWalking";
 
     private void Awake()
     {
@@ -33,9 +37,19 @@ public class CS_PlayerController : MonoBehaviour
         float x = _playerControls.Player.Move.ReadValue<Vector2>().x;
         float z = _playerControls.Player.Move.ReadValue<Vector2>().y;
 
-        Debug.Log(x + "," + z);
-
         _movement = new Vector3(x, 0, z).normalized;
+
+        _anim.SetBool(IS_WALKING_PARAM, _movement != Vector3.zero);
+
+        if (x != 0 && x < 0)
+        {
+            _playerSprite.flipX = true;
+        }
+
+        if (x != 0 && x > 0)
+        {
+            _playerSprite.flipX = false;
+        }
     }
 
     private void FixedUpdate()
