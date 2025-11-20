@@ -10,7 +10,9 @@ public class EnemeyManager : MonoBehaviour
     
     private void Awake() 
     {
-        GenerateEnemyByName("Slime", 10);
+        GenerateEnemyByName("Slime", 50);
+        GenerateEnemyByName("Slime", 50);
+        GenerateEnemyByName("Slime", 50);
     }
 
     private void GenerateEnemyByName(string enemyName, int level)
@@ -52,4 +54,5 @@ public class Enemy
     public int Strenght;
     public int Initiative;
     public GameObject EnemyBattleVisualPrefab; // used in battle scene, needs to be adjusted/expanded for enemys standing around in overworld scene!!!
+    // look into Party Overworld Visual Prefab for insight!!!
 }
