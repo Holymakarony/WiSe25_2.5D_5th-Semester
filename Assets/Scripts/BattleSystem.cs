@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.Utilities;
 using TMPro;
-//using Unity.VisualScripting;
 using System.Collections;
-using NUnit.Framework;
+using UnityEngine.SceneManagement;
 
 public class BattleSystem : MonoBehaviour
 {
@@ -36,6 +34,7 @@ public class BattleSystem : MonoBehaviour
     private const string WIN_MESSAGE = "Your party won the battle!";
     private const string LOSE_MESSAGE = "Your party has been defeated!";
     private const int TURN_DURATION = 2;
+    private const string OVERWORLD_SCENE = "OverworldScene";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -113,7 +112,7 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.Won;
                 bottomText.text = WIN_MESSAGE;
                 yield return new WaitForSeconds(TURN_DURATION); // wait
-                Debug.Log("Go back to overworld scene");
+                SceneManager.LoadScene(OVERWORLD_SCENE);
             }
         }
 
@@ -158,7 +157,7 @@ public class BattleSystem : MonoBehaviour
             // spawn party member battle visuals
             BattleVisuals tempBattleVisuals = Instantiate(currentParty[i].MemberBattleVisualPrefab, partySpawnPoints[i].position, Quaternion.identity).GetComponent<BattleVisuals>();
             // set starting values
-            tempBattleVisuals.SetStartingValues(currentParty[i].MaxHealth, currentParty[i].MaxHealth, currentParty[i].Level);
+            tempBattleVisuals.SetStartingValues(currentParty[i].CurrentHealth, currentParty[i].MaxHealth, currentParty[i].Level);
             // assign new party member entity to battlers + playerBattlers
             tempEntity.BattleVisuals = tempBattleVisuals;
 
@@ -250,6 +249,7 @@ public class BattleSystem : MonoBehaviour
         currTarget.BattleVisuals.PlayHitAnimation();// target play hit animation
         currTarget.UpdateUI(); // update UI
         bottomText.text = string.Format("{0} attacks {1} for {2} damage", currAttacker.Name, currTarget.Name, damage);
+        SaveHealth();
     }
 
     private int GetRandomPartyMember()
@@ -278,6 +278,14 @@ public class BattleSystem : MonoBehaviour
             } 
         }
         return enemies[Random.Range(0, enemies.Count)]; // return a random enemy
+    }
+
+    private void SaveHealth()
+    {
+        for (int i = 0; i < playerBattlers.Count; i++)
+        {
+            partyManager.SaveHealth(i, playerBattlers[i].CurrHealth);
+        }
     }
 }
 
