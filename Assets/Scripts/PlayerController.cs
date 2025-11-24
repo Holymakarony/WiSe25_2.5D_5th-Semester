@@ -21,6 +21,7 @@ public class CS_PlayerController : MonoBehaviour
     private bool _movingInGrass;
     private float _stepTimer;
     private int _stepsToEncounter;
+    private PartyManager partyManager;
 
     private const string IS_WALKING_PARAM = "IsWalking";
     private const string BATTLE_SCENE = "BattleScene";
@@ -40,8 +41,12 @@ public class CS_PlayerController : MonoBehaviour
     private void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody>();
+        partyManager = GameObject.FindFirstObjectByType<PartyManager>();
 
-
+        if(partyManager.GetPosition() != Vector3.zero) // if there is a saved position for the player when the player controller loads in
+        {
+            transform.position = partyManager.GetPosition(); // move player to saved position
+        }
     }
 
     // Update is called once per frame
@@ -82,6 +87,7 @@ public class CS_PlayerController : MonoBehaviour
 
                 if (_stepsInGrass>=_stepsToEncounter)
                 {
+                    partyManager.SetPosition(transform.position);  // save player position before encounter starts
                     SceneManager.LoadScene(BATTLE_SCENE);
                 }
             }
