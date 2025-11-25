@@ -26,6 +26,7 @@ public class CS_PlayerController : MonoBehaviour
     private const string IS_WALKING_PARAM = "IsWalking";
     private const string BATTLE_SCENE = "BattleScene";
     private const float TIME_PER_STEP = 0.5f;
+    private const int SPRINT_MULTIPLIER = 3;
 
     private void Awake()
     {
@@ -36,6 +37,11 @@ public class CS_PlayerController : MonoBehaviour
     private void OnEnable()
     {
         _playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _playerControls.Disable();
     }
 
     private void Start()
@@ -56,6 +62,15 @@ public class CS_PlayerController : MonoBehaviour
         float z = _playerControls.Player.Move.ReadValue<Vector2>().y;
 
         _movement = new Vector3(x, 0, z).normalized;
+
+        if (_playerControls.Player.Sprint.IsPressed() == true)
+        {
+            Sprint();
+        }
+        else
+        {
+            _movement = new Vector3(x, 0, z).normalized;
+        }
 
         _anim.SetBool(IS_WALKING_PARAM, _movement != Vector3.zero);
 
@@ -99,5 +114,8 @@ public class CS_PlayerController : MonoBehaviour
         _stepsToEncounter = Random.Range(_minStepsToEncounter, _maxStepsToEncounter);
     }
 
-
+    private void Sprint()
+    {
+        _movement = _movement * SPRINT_MULTIPLIER;
+    }
 }
