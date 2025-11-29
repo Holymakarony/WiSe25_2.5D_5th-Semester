@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+// Test
+// Lara stinkt D:
+
 public class DialoguePlayer : MonoBehaviour
 {
     [SerializeField] private GameObject dialoguePopUp;
