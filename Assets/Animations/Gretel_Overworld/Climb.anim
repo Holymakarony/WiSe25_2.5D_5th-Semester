@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: Climb
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -80049067, guid: 19e46d2d1ef00254281964b3f2de3c1e, type: 3}
+      value: {fileID: 415825241, guid: 07894f137ac47714b8faf551812046d6, type: 3}
     - time: 0.5
-      value: {fileID: -857482153, guid: 19e46d2d1ef00254281964b3f2de3c1e, type: 3}
+      value: {fileID: -1151303429, guid: 07894f137ac47714b8faf551812046d6, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -80049067, guid: 19e46d2d1ef00254281964b3f2de3c1e, type: 3}
-    - {fileID: -857482153, guid: 19e46d2d1ef00254281964b3f2de3c1e, type: 3}
+    - {fileID: 415825241, guid: 07894f137ac47714b8faf551812046d6, type: 3}
+    - {fileID: -1151303429, guid: 07894f137ac47714b8faf551812046d6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
