@@ -36,12 +36,12 @@ public class DialoguePlayer : MonoBehaviour
             dialogueIndex = 0;
             DisplayDialogue();
         }
-        else if (dialogueIsPlaying = true && dialogueIndex < dialogueTexts.Count)
+        else if (dialogueIsPlaying = true && dialogueIndex < dialogueTexts.Count -1)
         {
             dialogueIndex ++;
             DisplayDialogue();
         }
-        else if (dialogueIsPlaying = true && dialogueIndex >= dialogueTexts.Count)
+        else if (dialogueIsPlaying = true && dialogueIndex >= dialogueTexts.Count -1)
         {
             dialoguePopUp.SetActive(false);
             dialogueIsPlaying = false;
