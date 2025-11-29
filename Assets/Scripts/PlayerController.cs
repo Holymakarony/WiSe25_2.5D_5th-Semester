@@ -24,6 +24,7 @@ public class CS_PlayerController : MonoBehaviour
     private PartyManager partyManager;
 
     private const string IS_WALKING_PARAM = "IsWalking";
+    private const string IS_BACKWARDS_PARAM = "IsBackwards";
     private const string BATTLE_SCENE = "BattleScene";
     private const float TIME_PER_STEP = 0.5f;
     private const int SPRINT_MULTIPLIER = 3;
@@ -73,6 +74,7 @@ public class CS_PlayerController : MonoBehaviour
         }
 
         _anim.SetBool(IS_WALKING_PARAM, _movement != Vector3.zero);
+        _anim.SetBool(IS_BACKWARDS_PARAM, _movement.z > 0);
 
         if (x != 0 && x < 0)
         {
