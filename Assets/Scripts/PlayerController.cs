@@ -82,14 +82,24 @@ public class CS_PlayerController : MonoBehaviour
         _anim.SetBool(IS_WALKING_PARAM, _movement != Vector3.zero);
         _anim.SetBool(IS_BACKWARDS_PARAM, _movement.z > 0);
 
-        if (x != 0 && x < 0)
+        if (x != 0 && x < 0 && _movement.z <= 0)
         {
             _playerSprite.flipX = true;
         }
 
-        if (x != 0 && x > 0)
+        else if (x != 0 && x > 0 && _movement.z <= 0)
         {
             _playerSprite.flipX = false;
+        }
+
+        else if (x != 0 && x < 0 && _movement.z > 0)
+        {
+            _playerSprite.flipX = false;
+        }
+
+        else if (x != 0 && x > 0 && _movement.z > 0)
+        {
+            _playerSprite.flipX = true;
         }
     }
 
