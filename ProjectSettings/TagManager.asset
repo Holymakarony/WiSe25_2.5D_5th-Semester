@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPCJoinable
   - NPCDialogue
+  - Hideable
   layers:
   - Default
   - TransparentFX
