@@ -120,4 +120,11 @@ public class CS_PlayerController : MonoBehaviour
     {
         _movement = _movement * SPRINT_MULTIPLIER;
     }
+
+    public void SetOverworldVisuals(Animator animator, SpriteRenderer spriteRenderer)
+    {
+        _anim = animator;
+        _playerSprite = spriteRenderer;
+    }
+
 }

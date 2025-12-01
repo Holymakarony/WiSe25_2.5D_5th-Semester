@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CharacterManager : MonoBehaviour
     private bool infrontOfPartyMember;
     [AllowNull]private GameObject joinableMember; // idk ob das [AllowNull] wichtig ist, maybe mal Marvin oder Kamil fragen, braucht zum funktionieren: using System.Diagnostics.CodeAnalysis; !!!
     private PlayerControls playerControls;
+    private List<GameObject> overWorldCharacters = new List<GameObject>();
 
     private const string PARTY_JOINED_MESSAGE = " joined the Party!";
     private const string NPC_JOINABLE_TAG = "NPCJoinable";
@@ -28,6 +30,7 @@ public class CharacterManager : MonoBehaviour
     void Start()
     {
         playerControls.Player.Interact.performed += _ => Interact();
+        SpawnOverworldMembers();
     }
     
     private void OnEnable()
@@ -69,7 +72,43 @@ public class CharacterManager : MonoBehaviour
         // join pop up
         joinPopUp.SetActive(true);
         joinPopUpText.text = partyMember.MemberName + PARTY_JOINED_MESSAGE;
-        // add overworld follow member
+        SpawnOverworldMembers(); // add overworld follow member
+    }
+
+    private void SpawnOverworldMembers()
+    {
+        for (int i = 0; i < overWorldCharacters.Count; i++)
+        {
+            Destroy(overWorldCharacters[i]);
+        }
+        overWorldCharacters.Clear();
+
+        List<PartyMember> currentParty = GameObject.FindFirstObjectByType<PartyManager>().GetCurrentParty();
+
+        for (int i = 0; i < currentParty.Count; i++)
+        {
+            if(i == 0) // first member will be the player
+            {
+                GameObject player = gameObject; // get the player
+                GameObject playerVisual = Instantiate(currentParty[i].MemberOverworldVisualPrefab, player.transform.position, Quaternion.identity); // spawn the member visual
+                
+                playerVisual.transform.SetParent(player.transform);
+                
+                player.GetComponent<CS_PlayerController>().SetOverworldVisuals(playerVisual.GetComponent<Animator>(), playerVisual.GetComponent<SpriteRenderer>());// assign the player controller values
+                playerVisual.GetComponent<MemberFollowAI>().enabled = false;
+                overWorldCharacters.Add(playerVisual);// add the overworld character visual to the list
+            }
+            else // any other will be a follower
+            {
+                Vector3 positionToSpawn = transform.position; // get the follower spawn position
+                positionToSpawn.x -= 1;
+                
+                GameObject tempFollower = Instantiate(currentParty[i].MemberOverworldVisualPrefab, positionToSpawn, Quaternion.identity); // spawn follower
+
+                tempFollower.GetComponent<MemberFollowAI>().SetFollowDistance(i); // set follow ai settings
+                overWorldCharacters.Add(tempFollower); // add follow visual to list
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other) 
