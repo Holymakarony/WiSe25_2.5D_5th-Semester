@@ -1,7 +1,8 @@
-using System.Diagnostics.CodeAnalysis;
-using UnityEngine;
-using TMPro;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -126,6 +127,13 @@ public class CharacterManager : MonoBehaviour
             infrontOfDialogue = true;
             dialogueMember = other.gameObject;
             dialogueMember.GetComponent<DialoguePlayer>().ShowInteractPrompt(true);
+        }
+
+        else if(other.gameObject.tag == "PickUp")
+        {
+            
+            GameObject.FindFirstObjectByType<Volume>().GetComponent<ColorShift>().UpdateSaturation();
+            Destroy(other.gameObject);
         }
     }
 
