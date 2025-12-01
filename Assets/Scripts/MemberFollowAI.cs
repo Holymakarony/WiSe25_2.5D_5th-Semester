@@ -6,6 +6,8 @@ public class MemberFollowAI : MonoBehaviour
     [SerializeField] private int speed;
     
     private float followDist;
+    private float sprintDist;
+    private float sprintMutliplier = 1;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
 
@@ -24,9 +26,12 @@ public class MemberFollowAI : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, followTarget.position) > followDist)
         {
+            // multiply speed by 3 if distance from player to follower > then sprintDistance
+            if (Vector3.Distance(transform.position, followTarget.position) > sprintDist){sprintMutliplier = 3;}
+            else if (Vector3.Distance(transform.position, followTarget.position) !> sprintDist){sprintMutliplier = 1;}
             // walk to player
             anim.SetBool(IS_WALKING_PARAM, true);
-            float step = speed * Time.deltaTime;
+            float step = speed * sprintMutliplier * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, followTarget.position, step);
 
             if (followTarget.position.x - transform.position.x < 0)
@@ -42,11 +47,13 @@ public class MemberFollowAI : MonoBehaviour
         {
             // stop walking + return to idle
             anim.SetBool(IS_WALKING_PARAM, false);
+            sprintMutliplier = 1;
         }
     }
 
     public void SetFollowDistance(float followDistance)
     {
         followDist = followDistance;
+        sprintDist = followDist * 3;
     }
 }
