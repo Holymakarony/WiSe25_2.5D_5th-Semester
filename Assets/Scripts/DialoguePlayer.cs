@@ -38,6 +38,7 @@ public class DialoguePlayer : MonoBehaviour
         if (dialogueIsPlaying != true)
         {
             dialogueIsPlaying = true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<CS_PlayerController>().SetCanMove(false);
             dialogueIndex = 0;
             DisplayDialogue();
         }
@@ -50,6 +51,7 @@ public class DialoguePlayer : MonoBehaviour
         {
             dialoguePopUp.SetActive(false);
             dialogueIsPlaying = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<CS_PlayerController>().SetCanMove(true);
         }
     }
 

@@ -14,7 +14,7 @@ public class CS_PlayerController : MonoBehaviour
     [SerializeField] private int _maxStepsToEncounter;
 
 
-
+    private bool canMove = true;
     private PlayerControls _playerControls;
     private Rigidbody _rb;
     private Vector3 _movement;
@@ -59,8 +59,14 @@ public class CS_PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = _playerControls.Player.Move.ReadValue<Vector2>().x;
-        float z = _playerControls.Player.Move.ReadValue<Vector2>().y;
+        float x = 0;
+        float z = 0;
+
+        if(canMove)
+        {
+            x = _playerControls.Player.Move.ReadValue<Vector2>().x;
+            z = _playerControls.Player.Move.ReadValue<Vector2>().y;
+        }
 
         _movement = new Vector3(x, 0, z).normalized;
 
@@ -119,6 +125,11 @@ public class CS_PlayerController : MonoBehaviour
     private void Sprint()
     {
         _movement = _movement * SPRINT_MULTIPLIER;
+    }
+
+    public void SetCanMove(bool CanMove)
+    {
+        canMove = CanMove;
     }
 
     public void SetOverworldVisuals(Animator animator, SpriteRenderer spriteRenderer)

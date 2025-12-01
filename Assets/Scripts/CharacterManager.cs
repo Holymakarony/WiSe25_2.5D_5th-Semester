@@ -19,7 +19,7 @@ public class CharacterManager : MonoBehaviour
 
     // Dialogue Prototype
     private bool infrontOfDialogue;
-    private GameObject dialogueMember;
+    [AllowNull]private GameObject dialogueMember;
     
     private void Awake()
     {
