@@ -46,6 +46,10 @@ public class DialoguePlayer : MonoBehaviour
         {
             dialogueIndex ++;
             DisplayDialogue();
+            if (dialogueTexts[dialogueIndex].quest)
+            {
+                FindFirstObjectByType<QuestManager>().AddNewQuest(dialogueTexts[dialogueIndex].quest);
+            }
         }
         else if (dialogueIsPlaying = true && dialogueIndex >= dialogueTexts.Count -1)
         {
