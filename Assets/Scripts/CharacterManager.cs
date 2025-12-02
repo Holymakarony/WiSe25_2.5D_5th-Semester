@@ -22,6 +22,8 @@ public class CharacterManager : MonoBehaviour
     // Dialogue Prototype
     private bool infrontOfDialogue;
     [AllowNull]private GameObject dialogueMember;
+
+    private bool infrontOfHouse;
     
     // Forced Enemy Encounter Prototype
     private bool infrontOfEnemy;
@@ -74,6 +76,10 @@ public class CharacterManager : MonoBehaviour
         {
             forcedEnemy.GetComponent<ForcedEnemyEncounter>().generateForcedEncounter();
             FindFirstObjectByType<CS_PlayerController>().LoadBattleScene();
+        }
+        else if (infrontOfHouse == true)
+        {
+            FindFirstObjectByType<CS_PlayerController>().LoadGretelHouse();
         }
     }
 
@@ -157,6 +163,11 @@ public class CharacterManager : MonoBehaviour
             forcedEnemy = other.gameObject;
             forcedEnemy.GetComponent<ForcedEnemyEncounter>().ShowInteractPrompt(true);
         }
+
+        else if (other.gameObject.tag == "House")
+        {
+            infrontOfHouse = true;
+        }
     }
 
     private void OnTriggerExit(Collider other) 
@@ -181,6 +192,11 @@ public class CharacterManager : MonoBehaviour
             infrontOfEnemy = false;
             forcedEnemy.GetComponent<ForcedEnemyEncounter>().ShowInteractPrompt(false);
             forcedEnemy = null;
+        }
+
+        else if (other.gameObject.tag == "House")
+        {
+            infrontOfHouse = false;
         }
     }
 }

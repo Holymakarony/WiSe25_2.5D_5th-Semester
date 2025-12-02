@@ -1,0 +1,1213 @@
+fileFormatVersion: 2
+guid: 0d398be937488ae4cb0f8fc3b71ca880
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PropsInsideOutside_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ee6ba0f4459bd4e85a677e8ead9b92
+      internalID: 415306427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 41
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d733fb0c2a0bc854bb7840ae8f6e6ddd
+      internalID: -1650264628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 41
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108161cc5583c5e4e9ea038bf0f2035e
+      internalID: -1759043551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 57
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110e2846d55efc34fa1e153fdd37a371
+      internalID: -1465079106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 57
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0780cdd1269fa4f83c52f8f8151b8c
+      internalID: 892332666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_5
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 30
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f56338f0dfc6647991792d8d0ea541
+      internalID: 90207084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_6
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 30
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308885fcaeab50d44be80b9a523958cb
+      internalID: 912516764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_7
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 17
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085e3284a2be3e44b869642a218ec2d5
+      internalID: -1121675129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 32
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632724942ecd2044a96bcd48550d520e
+      internalID: 1313901803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_9
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 32
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196bb999335ab884888bc9833fbdfccb
+      internalID: -380844299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_10
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 32
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4047fede232eab94384d2eff3d8fa3db
+      internalID: 1993991738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_11
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 32
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1bfd39f40e1ff4d8452592f06df60b
+      internalID: 1806778065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_12
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 32
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f83e932ae9be94fae0c8ceb5510d13
+      internalID: 2106000418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_13
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 32
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b49925ddf6bcc4589ce1b6e2fa9abb
+      internalID: -494485148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_14
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 32
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2f2f2a6b005bd47bf3bb86dd34e453
+      internalID: -1949998844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_15
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 32
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4efe2c37eca1aa4fa5230d88a861aa5
+      internalID: -2029363245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_16
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 17
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c78687b2dfb0f42b6c98d5f065ab6a
+      internalID: -1353365904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 9}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e234d389be37b914f93429e355d92d22
+      internalID: -298297957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_18
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 17
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d7b0330926aea4a82b588b5240c0dd
+      internalID: 1571932426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_19
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 19
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4045878d050ab448587d6e27d85f51
+      internalID: -1620510136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_20
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 23
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd37ea822d173c44a9304f3760b545c
+      internalID: 1159040787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_21
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 23
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad60d954ca853344c813677ced27508b
+      internalID: 884766460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_22
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 23
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfee4ea3d4da9d47b170c276cc06425
+      internalID: 1767249012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_23
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 23
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7cd70fc21c0de4ea8be018fb10ee62
+      internalID: -1841099132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_24
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 23
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240d5e61fe37baa4fa1bdbee1fc7c2fd
+      internalID: -1157264777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_25
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4a462bdd436ac4bb418e0f10d73178
+      internalID: -940244789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_26
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1039d08bedb646f40bf86e664637525c
+      internalID: -370683457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_27
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec506d0c13969744b37f3db2a8b8522
+      internalID: 1147319289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_28
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 0
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59e25205d6d99d49a9c8e9a9f3fe26b
+      internalID: 615613334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_29
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 0
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4aab975f6b540340b6d599631108794
+      internalID: -335759768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_30
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1329ce26ea3a574d9c0418b5bc0fccb
+      internalID: 1016774019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_31
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcf20a831539b94cb90277c31f7c5b6
+      internalID: -1979826893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_32
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 10
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 7, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dc3c94950c6304aa6f0d2cd4adab91
+      internalID: -1553012424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_33
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 16
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9a9b045d269814bba1db194331c420
+      internalID: -905589762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_34
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 11
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa21d17cfaf49149ba5d0193177a5e4
+      internalID: 1681567099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_35
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 12
+        width: 15
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b809bf8c0a0b046bc5ebac65ef813a
+      internalID: 270292347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_36
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dca9c1f2655aab4ab9b4afd43deebad
+      internalID: -369665398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_37
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b880b28720fa404d830711b47d0cb93
+      internalID: 74432173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_38
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c5c9d6baca5a447b2ab8cdcad81752
+      internalID: 984260517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_39
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4428b7e32414b7c409c7c96df3e95a61
+      internalID: -1054475671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_40
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c30af16a4507c1479e755fcf4de50c7
+      internalID: -415140140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_41
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdc0dbf718278d46a7ffd8fea3e1f32
+      internalID: -2134712027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_42
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 17
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6ef847199b81d40989ddf9f96ebfad
+      internalID: 731798432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_43
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 17
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f452abd8d84a29c40aee23f6efa9fca3
+      internalID: 760433376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_44
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 16
+        width: 3
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b731fde851c864492d540e89f3c286
+      internalID: -1078889807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_45
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 13
+        width: 7
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42a1cb1eaec18644a7e8b82fd8c8b42
+      internalID: -706341849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PropsInsideOutside_46
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 10
+        width: 7
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5404e75fb549fda4ca7456a2c455dff1
+      internalID: 35672170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PropsInsideOutside_0: 415306427
+      PropsInsideOutside_1: -1650264628
+      PropsInsideOutside_10: 1993991738
+      PropsInsideOutside_11: 1806778065
+      PropsInsideOutside_12: 2106000418
+      PropsInsideOutside_13: -494485148
+      PropsInsideOutside_14: -1949998844
+      PropsInsideOutside_15: -2029363245
+      PropsInsideOutside_16: -1353365904
+      PropsInsideOutside_17: -298297957
+      PropsInsideOutside_18: 1571932426
+      PropsInsideOutside_19: -1620510136
+      PropsInsideOutside_2: -1759043551
+      PropsInsideOutside_20: 1159040787
+      PropsInsideOutside_21: 884766460
+      PropsInsideOutside_22: 1767249012
+      PropsInsideOutside_23: -1841099132
+      PropsInsideOutside_24: -1157264777
+      PropsInsideOutside_25: -940244789
+      PropsInsideOutside_26: -370683457
+      PropsInsideOutside_27: 1147319289
+      PropsInsideOutside_28: 615613334
+      PropsInsideOutside_29: -335759768
+      PropsInsideOutside_3: -1465079106
+      PropsInsideOutside_30: 1016774019
+      PropsInsideOutside_31: -1979826893
+      PropsInsideOutside_32: -1553012424
+      PropsInsideOutside_33: -905589762
+      PropsInsideOutside_34: 1681567099
+      PropsInsideOutside_35: 270292347
+      PropsInsideOutside_36: -369665398
+      PropsInsideOutside_37: 74432173
+      PropsInsideOutside_38: 984260517
+      PropsInsideOutside_39: -1054475671
+      PropsInsideOutside_4: 892332666
+      PropsInsideOutside_40: -415140140
+      PropsInsideOutside_41: -2134712027
+      PropsInsideOutside_42: 731798432
+      PropsInsideOutside_43: 760433376
+      PropsInsideOutside_44: -1078889807
+      PropsInsideOutside_45: -706341849
+      PropsInsideOutside_46: 35672170
+      PropsInsideOutside_5: 90207084
+      PropsInsideOutside_6: 912516764
+      PropsInsideOutside_7: -1121675129
+      PropsInsideOutside_8: 1313901803
+      PropsInsideOutside_9: -380844299
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

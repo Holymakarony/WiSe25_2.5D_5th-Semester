@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe24d45fa03bfe441b1cc1dcabb69275
+guid: a2e555d95c57b6e459cf624b921ec588
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TreesAndGrass800%_0
+      name: Well, Bed, Table etc_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 384
-        height: 496
+        width: 48
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8980bfe01b095194bb46bbe3bcc06ca6
-      internalID: -1463335875
+      spriteID: b98d0b213b25ccd4bb3c7ed54cac3012
+      internalID: 2117931231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesAndGrass800%_1
+      name: Well, Bed, Table etc_1
       rect:
         serializedVersion: 2
-        x: 424
-        y: 384
-        width: 56
-        height: 64
+        x: 79
+        y: 32
+        width: 19
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,42 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a52051ced3b76a04281f6d6b26230ff6
-      internalID: 1086358159
+      spriteID: b7648b9464183fc4799421b849be4071
+      internalID: 417080734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesAndGrass800%_2
+      name: Well, Bed, Table etc_2
       rect:
         serializedVersion: 2
-        x: 400
-        y: 256
-        width: 96
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 677f940d5b45f284da49c57b8ab1f454
-      internalID: 421699794
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TreesAndGrass800%_3
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 128
+        x: 112
+        y: 16
         width: 32
-        height: 40
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9054501071eadf42896551c654fe4c6
-      internalID: -1482459456
+      spriteID: 4b2a17e7ca7ea32458626144abbc0935
+      internalID: 562605235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesAndGrass800%_4
+      name: Well, Bed, Table etc_3
       rect:
         serializedVersion: 2
-        x: 456
-        y: 128
-        width: 40
-        height: 40
+        x: 158
+        y: 32
+        width: 21
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +191,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aab156d382876741bb9380988e91fe6
-      internalID: -1890606546
+      spriteID: f75038019f21ed4449a2cf58a90171d8
+      internalID: 1679876740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TreesAndGrass800%_5
+      name: Well, Bed, Table etc_4
       rect:
         serializedVersion: 2
-        x: 408
+        x: 64
+        y: 16
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bf9f8f4aa543743930bdae654dbb64
+      internalID: -222307623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Well, Bed, Table etc_5
+      rect:
+        serializedVersion: 2
+        x: 160
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +235,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c8454328866c7d4f9bae75a5e9c9592
-      internalID: 981577080
+      spriteID: 7769bae83f9cea442bc9d53f52d7c438
+      internalID: -1379837561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Well, Bed, Table etc_6
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcbbacd5f3c64d489ad2454e7174ec8
+      internalID: -1055733757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Well, Bed, Table etc_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73cbd776d41b364ea5627341366f145
+      internalID: -1112291715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Well, Bed, Table etc_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9154fc7add9aab4b8b934828b537c46
+      internalID: 613210761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Well, Bed, Table etc_9
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbf400710cb43044b47e19fed55127a
+      internalID: 1584702476
       vertices: []
       indices: 
       edges: []
@@ -257,12 +345,16 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      TreesAndGrass800%_0: -1463335875
-      TreesAndGrass800%_1: 1086358159
-      TreesAndGrass800%_2: 421699794
-      TreesAndGrass800%_3: -1482459456
-      TreesAndGrass800%_4: -1890606546
-      TreesAndGrass800%_5: 981577080
+      Well, Bed, Table etc_0: 2117931231
+      Well, Bed, Table etc_1: 417080734
+      Well, Bed, Table etc_2: 562605235
+      Well, Bed, Table etc_3: 1679876740
+      Well, Bed, Table etc_4: -222307623
+      Well, Bed, Table etc_5: -1379837561
+      Well, Bed, Table etc_6: -1055733757
+      Well, Bed, Table etc_7: -1112291715
+      Well, Bed, Table etc_8: 613210761
+      Well, Bed, Table etc_9: 1584702476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

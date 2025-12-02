@@ -26,6 +26,7 @@ public class CS_PlayerController : MonoBehaviour
     private const string IS_WALKING_PARAM = "IsWalking";
     private const string IS_BACKWARDS_PARAM = "IsBackwards";
     private const string BATTLE_SCENE = "BattleScene";
+    private const string GRETEL_HOUSE_SCENE = "GretelHouseScene";
     private const float TIME_PER_STEP = 0.5f;
     private const int SPRINT_MULTIPLIER = 3;
 
@@ -153,5 +154,10 @@ public class CS_PlayerController : MonoBehaviour
         partyManager.SetPosition(transform.position);  // save player position before encounter starts
         SceneManager.LoadScene(BATTLE_SCENE);
     }
-
+    
+    public void LoadGretelHouse()
+    {
+        partyManager.SetPosition(transform.position);
+        SceneManager.LoadScene(GRETEL_HOUSE_SCENE);
+    }
 }
