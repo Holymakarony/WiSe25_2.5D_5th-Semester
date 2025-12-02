@@ -69259,6 +69259,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterManager
   joinPopUp: {fileID: 2076550190}
   joinPopUpText: {fileID: 354873139}
+  CornerPopUp: {fileID: 1672239573}
+  CornerPopUpTitle: {fileID: 1988319436}
+  CornerPopUpText: {fileID: 565073728}
 --- !u!1001 &1319379416
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -45,15 +45,7 @@ public class QuestManager : MonoBehaviour
                     QuestCompleted(activeQuests[i]);
                     activeQuests.Remove(activeQuests[i]);
                     
-                    if(activeQuests.Count > 0)
-                    {
-                        QuestCornerTitle.text = activeQuests[0].Title;
-                        QuestCornerDescription.text = activeQuests[0].Desc;
-                    }
-                    else if(activeQuests.Count == 0)
-                    {
-                        QuestCornerPopUp.SetActive(false);
-                    }
+                    
 
                     if(completedQuestQueue.Count > 0)
                     {
@@ -62,6 +54,7 @@ public class QuestManager : MonoBehaviour
                             if (completedQuestQueue[f].QuestType == Quest.Type.Fetch || completedQuestQueue[f].QuestType == Quest.Type.Talk)
                             {
                                 ClearQuestQueue();
+                                UpdateCornerPopUp();
                             }
                         }
                     }
@@ -87,7 +80,7 @@ public class QuestManager : MonoBehaviour
     }
 
     public void ClearQuestQueue()
-    {
+    {     
             // reset the pop ups
             PopUp = GameObject.FindFirstObjectByType<CharacterManager>().joinPopUp;
             PopUpText = GameObject.FindFirstObjectByType<CharacterManager>().joinPopUpText;
@@ -105,6 +98,21 @@ public class QuestManager : MonoBehaviour
     {
         completedQuestQueue.Add(quest);
     }
-
     
+    public void UpdateCornerPopUp()
+    {
+        QuestCornerPopUp = GameObject.FindFirstObjectByType<CharacterManager>().CornerPopUp;
+        QuestCornerDescription = GameObject.FindFirstObjectByType<CharacterManager>().CornerPopUpText;
+        QuestCornerTitle = GameObject.FindFirstObjectByType<CharacterManager>().CornerPopUpTitle;
+
+        if(activeQuests.Count > 0)
+        {
+            QuestCornerTitle.text = activeQuests[0].Title;
+            QuestCornerDescription.text = activeQuests[0].Desc;
+        }
+        else if(activeQuests.Count == 0)
+        {
+            QuestCornerPopUp.SetActive(false);
+        }
+    }
 }

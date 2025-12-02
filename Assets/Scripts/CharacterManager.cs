@@ -9,6 +9,10 @@ public class CharacterManager : MonoBehaviour
 {
     [SerializeField] public GameObject joinPopUp;
     [SerializeField] public TextMeshProUGUI joinPopUpText;
+    [SerializeField] public GameObject CornerPopUp;
+    [SerializeField] public TextMeshProUGUI CornerPopUpTitle;
+    [SerializeField] public TextMeshProUGUI CornerPopUpText;
+
     
     private bool infrontOfPartyMember;
     [AllowNull]private GameObject joinableMember; // idk ob das [AllowNull] wichtig ist, maybe mal Marvin oder Kamil fragen, braucht zum funktionieren: using System.Diagnostics.CodeAnalysis; !!!
@@ -118,6 +122,7 @@ public class CharacterManager : MonoBehaviour
                 
                 // Clear Completed Quests on scene change
                 FindFirstObjectByType<QuestManager>().ClearQuestQueue();
+                FindFirstObjectByType<QuestManager>().UpdateCornerPopUp();
             }
             else // any other will be a follower
             {
