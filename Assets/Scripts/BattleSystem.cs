@@ -110,6 +110,7 @@ public class BattleSystem : MonoBehaviour
                 bottomText.text = string.Format("{0} defeated {1}.", currAttacker.Name, currTarget.Name);
                 yield return new WaitForSeconds(TURN_DURATION); // wait
                 enemyBattlers.Remove(currTarget);
+                FindFirstObjectByType<QuestManager>().CheckQuestStatus("Slime");
             }
             // if no enemies remain -> won
             if (enemyBattlers.Count <= 0)

@@ -23,7 +23,6 @@ public class ColorShift : MonoBehaviour
     private ColorAdjustments _colorAdjustments;
     private float StartSaturation = -100f;
 
-
     void Start()
     {
         GetComponent<Volume>().profile.TryGet<ColorAdjustments>(out _colorAdjustments);

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Gretel
   DisplayLeft: 1
-  Text: Mhm mhm, I understand. Have a good day sir.
+  Text: Mhm mhm, I understand. I'll kill those slimes for you!
+  quest: {fileID: 11400000, guid: 3334e93f9d3492f459641524ce7d2256, type: 2}

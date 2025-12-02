@@ -6,8 +6,8 @@ using UnityEngine.Rendering;
 
 public class CharacterManager : MonoBehaviour
 {
-    [SerializeField] private GameObject joinPopUp;
-    [SerializeField] private TextMeshProUGUI joinPopUpText;
+    [SerializeField] public GameObject joinPopUp;
+    [SerializeField] public TextMeshProUGUI joinPopUpText;
     
     private bool infrontOfPartyMember;
     [AllowNull]private GameObject joinableMember; // idk ob das [AllowNull] wichtig ist, maybe mal Marvin oder Kamil fragen, braucht zum funktionieren: using System.Diagnostics.CodeAnalysis; !!!
@@ -98,6 +98,9 @@ public class CharacterManager : MonoBehaviour
                 player.GetComponent<CS_PlayerController>().SetOverworldVisuals(playerVisual.GetComponent<Animator>(), playerVisual.GetComponent<SpriteRenderer>());// assign the player controller values
                 playerVisual.GetComponent<MemberFollowAI>().enabled = false;
                 overWorldCharacters.Add(playerVisual);// add the overworld character visual to the list
+                
+                // Clear Completed Quests on scene change
+                FindFirstObjectByType<QuestManager>().ClearQuestQueue();
             }
             else // any other will be a follower
             {

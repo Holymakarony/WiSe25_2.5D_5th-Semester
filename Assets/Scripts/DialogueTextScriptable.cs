@@ -6,4 +6,5 @@ public class DialogueText : ScriptableObject
     public string SpeakerName;
     public bool DisplayLeft;
     public string Text;
+    public Quest quest;
 }

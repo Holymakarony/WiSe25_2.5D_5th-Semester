@@ -82,6 +82,8 @@ public class PartyManager : MonoBehaviour
     {
         return playerPosition;
     }
+    
+    
 }
 
 [System.Serializable]
