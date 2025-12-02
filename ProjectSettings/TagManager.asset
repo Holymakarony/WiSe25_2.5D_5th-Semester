@@ -9,6 +9,7 @@ TagManager:
   - Hideable
   - PickUp
   - ForcedEnemy
+  - House
   layers:
   - Default
   - TransparentFX
