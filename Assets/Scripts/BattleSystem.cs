@@ -110,7 +110,7 @@ public class BattleSystem : MonoBehaviour
                 bottomText.text = string.Format("{0} defeated {1}.", currAttacker.Name, currTarget.Name);
                 yield return new WaitForSeconds(TURN_DURATION); // wait
                 enemyBattlers.Remove(currTarget);
-                FindFirstObjectByType<QuestManager>().CheckQuestStatus("Slime");
+                FindFirstObjectByType<QuestManager>().CheckQuestStatus(currTarget.Name);
             }
             // if no enemies remain -> won
             if (enemyBattlers.Count <= 0)
@@ -144,6 +144,9 @@ public class BattleSystem : MonoBehaviour
                     bottomText.text = LOSE_MESSAGE;
                     yield return new WaitForSeconds(TURN_DURATION); // wait
                     Debug.Log("Game Over!");
+                    SceneManager.LoadScene(OVERWORLD_SCENE);
+                    
+                    
                 }
             }
         }
