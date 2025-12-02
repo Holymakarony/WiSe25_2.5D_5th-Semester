@@ -8,6 +8,7 @@ TagManager:
   - NPCDialogue
   - Hideable
   - PickUp
+  - ForcedEnemy
   layers:
   - Default
   - TransparentFX

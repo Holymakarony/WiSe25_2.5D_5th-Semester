@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 
 public class DialoguePlayer : MonoBehaviour
 {
+    [SerializeField] public string NPCName;
     [SerializeField] private GameObject dialoguePopUp;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI speakerLeft;
@@ -56,6 +57,12 @@ public class DialoguePlayer : MonoBehaviour
             dialoguePopUp.SetActive(false);
             dialogueIsPlaying = false;
             GameObject.FindGameObjectWithTag("Player").GetComponent<CS_PlayerController>().SetCanMove(true);
+            
+            if (dialogueTexts[dialogueIndex].quest)
+            {
+                FindFirstObjectByType<QuestManager>().AddNewQuest(dialogueTexts[dialogueIndex].quest);
+            }
+            FindFirstObjectByType<QuestManager>().CheckQuestStatus(NPCName);
         }
     }
 
