@@ -148,4 +148,10 @@ public class CS_PlayerController : MonoBehaviour
         _playerSprite = spriteRenderer;
     }
 
+    public void LoadBattleScene()
+    {
+        partyManager.SetPosition(transform.position);  // save player position before encounter starts
+        SceneManager.LoadScene(BATTLE_SCENE);
+    }
+
 }

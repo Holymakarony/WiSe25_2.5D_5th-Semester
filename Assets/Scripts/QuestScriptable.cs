@@ -9,5 +9,6 @@ public class Quest : ScriptableObject
     public Type QuestType;
     public string Desc = "null";
     public string Target = "null";
-    public int Amount = 0;
+    public int currentAmount = 0;
+    public int targetAmount;
 }

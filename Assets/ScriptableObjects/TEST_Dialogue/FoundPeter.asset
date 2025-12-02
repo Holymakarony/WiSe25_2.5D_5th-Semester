@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f847d14b8298f4b89cc8461b3cd2d1, type: 3}
-  m_Name: TestQuestSlime
-  m_EditorClassIdentifier: Assembly-CSharp::Quest
-  Title: Test Quest
-  QuestType: 1
-  Desc: Just a test quest
-  Target: Slime
-  currentAmount: 0
-  targetAmount: 1
+  m_Script: {fileID: 11500000, guid: 2a96cf05b727589479e2e5f939c13be9, type: 3}
+  m_Name: FoundPeter
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueText
+  SpeakerName: Peter
+  DisplayLeft: 0
+  Text: You found me!
+  quest: {fileID: 0}

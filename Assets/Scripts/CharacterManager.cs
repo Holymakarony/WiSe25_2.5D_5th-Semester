@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -22,6 +23,11 @@ public class CharacterManager : MonoBehaviour
     private bool infrontOfDialogue;
     [AllowNull]private GameObject dialogueMember;
     
+    // Forced Enemy Encounter Prototype
+    private bool infrontOfEnemy;
+    [AllowNull]private GameObject forcedEnemy;
+
+
     private void Awake()
     {
         playerControls = new PlayerControls();
@@ -63,6 +69,11 @@ public class CharacterManager : MonoBehaviour
         else if (infrontOfDialogue == true)
         {
             dialogueMember.GetComponent<DialoguePlayer>().PlayDialogue();
+        }
+        else if (infrontOfEnemy == true)
+        {
+            forcedEnemy.GetComponent<ForcedEnemyEncounter>().generateForcedEncounter();
+            FindFirstObjectByType<CS_PlayerController>().LoadBattleScene();
         }
     }
 
@@ -136,7 +147,15 @@ public class CharacterManager : MonoBehaviour
         {
             
             GameObject.FindFirstObjectByType<Volume>().GetComponent<ColorShift>().UpdateSaturation();
+            FindFirstObjectByType<QuestManager>().CheckQuestStatus(other.gameObject.name);
             Destroy(other.gameObject);
+        }
+        // Forced Enemy Prototype
+        else if(other.gameObject.tag == "ForcedEnemy")
+        {
+            infrontOfEnemy = true;
+            forcedEnemy = other.gameObject;
+            forcedEnemy.GetComponent<ForcedEnemyEncounter>().ShowInteractPrompt(true);
         }
     }
 
@@ -156,7 +175,12 @@ public class CharacterManager : MonoBehaviour
             other.gameObject.GetComponent<DialoguePlayer>().ShowInteractPrompt(false);
             dialogueMember = null;
         }
+        // Forced Enemy Prototype
+        else if(other.gameObject.tag == "ForcedEnemy")
+        {
+            infrontOfEnemy = false;
+            forcedEnemy.GetComponent<ForcedEnemyEncounter>().ShowInteractPrompt(false);
+            forcedEnemy = null;
+        }
     }
-
-    
 }

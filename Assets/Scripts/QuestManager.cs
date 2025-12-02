@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
@@ -9,6 +10,10 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private List<Quest> completedQuestQueue;
     [SerializeField] private GameObject PopUp;
     [SerializeField] private TextMeshProUGUI PopUpText;
+    [Header("Quest Description PopUp")]
+    [SerializeField] private GameObject QuestCornerPopUp;
+    [SerializeField] private TextMeshProUGUI QuestCornerTitle;
+    [SerializeField] private TextMeshProUGUI QuestCornerDescription;
     
     private const string ACTIVATED_MESSAGE = " activated";
     private const string COMPLETED_MESSAGE = " completed"; 
@@ -30,17 +35,35 @@ public class QuestManager : MonoBehaviour
         {
             if(activeQuests[i].Target == target)
             {
-                if (activeQuests[i].Target == target && activeQuests[i].Amount < activeQuests[i].Amount - 1)
+                if (activeQuests[i].Target == target && activeQuests[i].currentAmount < activeQuests[i].targetAmount - 1)
                 {
-                    activeQuests[i].Amount++;
+                    activeQuests[i].currentAmount++;
+                    print("Collectable aufgesammelt");
                 }
-                else if(activeQuests[i].Target == target && activeQuests[i].Amount >= activeQuests[i].Amount - 1)
+                else if(activeQuests[i].Target == target && activeQuests[i].currentAmount >= activeQuests[i].targetAmount - 1)
                 {
                     QuestCompleted(activeQuests[i]);
                     activeQuests.Remove(activeQuests[i]);
-                    if(activeQuests[i].QuestType == Quest.Type.Fetch)
+                    
+                    if(activeQuests.Count > 0)
                     {
-                        ClearQuestQueue();
+                        QuestCornerTitle.text = activeQuests[0].Title;
+                        QuestCornerDescription.text = activeQuests[0].Desc;
+                    }
+                    else if(activeQuests.Count == 0)
+                    {
+                        QuestCornerPopUp.SetActive(false);
+                    }
+
+                    if(completedQuestQueue.Count > 0)
+                    {
+                        for (int f = 0; f < completedQuestQueue.Count; f++)
+                        {
+                            if (completedQuestQueue[f].QuestType == Quest.Type.Fetch || completedQuestQueue[f].QuestType == Quest.Type.Talk)
+                            {
+                                ClearQuestQueue();
+                            }
+                        }
                     }
                 }
             }
@@ -52,10 +75,14 @@ public class QuestManager : MonoBehaviour
         if(activeQuests.Count < 3)
         {
             activeQuests.Add(quest);
+            quest.currentAmount = 0;
             // PopUp with Quest Title
             PopUp.SetActive(true);
             PopUpText.text = quest.Title + ACTIVATED_MESSAGE;
             // add quest popup
+            QuestCornerPopUp.SetActive(true);
+            QuestCornerTitle.text = quest.Title;
+            QuestCornerDescription.text = quest.Desc;
         }
     }
 
