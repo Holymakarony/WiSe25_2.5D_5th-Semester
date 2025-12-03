@@ -1,10 +1,13 @@
 //using System.Numerics;
 //using UnityEditor.Callbacks;
+using Cysharp.Threading.Tasks.Triggers;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CS_PlayerController : MonoBehaviour
 {
+
     [SerializeField] private int _speed;
     [SerializeField] private Animator _anim;
     [SerializeField] private SpriteRenderer _playerSprite;
@@ -12,6 +15,7 @@ public class CS_PlayerController : MonoBehaviour
     [SerializeField] private int _stepsInGrass;
     [SerializeField] private int _minStepsToEncounter;
     [SerializeField] private int _maxStepsToEncounter;
+    [SerializeField] private GameObject _pauseMenu;
 
 
     private bool canMove = true;
@@ -51,7 +55,7 @@ public class CS_PlayerController : MonoBehaviour
         _rb = gameObject.GetComponent<Rigidbody>();
         partyManager = GameObject.FindFirstObjectByType<PartyManager>();
 
-        if(partyManager.GetPosition() != Vector3.zero) // if there is a saved position for the player when the player controller loads in
+        if (partyManager.GetPosition() != Vector3.zero) // if there is a saved position for the player when the player controller loads in
         {
             transform.position = partyManager.GetPosition(); // move player to saved position
         }
@@ -63,7 +67,7 @@ public class CS_PlayerController : MonoBehaviour
         float x = 0;
         float z = 0;
 
-        if(canMove)
+        if (canMove)
         {
             x = _playerControls.Player.Move.ReadValue<Vector2>().x;
             z = _playerControls.Player.Move.ReadValue<Vector2>().y;
@@ -71,11 +75,17 @@ public class CS_PlayerController : MonoBehaviour
 
         _movement = new Vector3(x, 0, z).normalized;
 
+
         if (_playerControls.Player.Pause.IsPressed())
         {
-            GameObject.FindFirstObjectByType<PauseMenu>().Pause(!GameObject.FindFirstObjectByType<PauseMenu>().GameIsPaused);
+            _pauseMenu.GetComponent<PauseMenu>().Pause(!_pauseMenu.GetComponent<PauseMenu>().GameIsPaused);
+            
         }
-       
+        else
+        {
+            return;
+        }
+
 
         if (_playerControls.Player.Sprint.IsPressed() == true)
         {
@@ -110,6 +120,7 @@ public class CS_PlayerController : MonoBehaviour
         }
     }
 
+
     private void FixedUpdate()
     {
         _rb.MovePosition(transform.position + _movement * _speed * Time.fixedDeltaTime);
@@ -136,7 +147,7 @@ public class CS_PlayerController : MonoBehaviour
 
     private void CalculateStepsToNextEncounter()
     {
-        _stepsToEncounter = Random.Range(_minStepsToEncounter, _maxStepsToEncounter);
+        _stepsToEncounter = UnityEngine.Random.Range(_minStepsToEncounter, _maxStepsToEncounter);
     }
 
     private void Sprint()

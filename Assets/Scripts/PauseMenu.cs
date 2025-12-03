@@ -1,21 +1,32 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-     public bool GameIsPaused = false;
-     public GameObject PauseMenuUI;
+    public UIManager UIManager;
+
+    public bool GameIsPaused = false;
+    public GameObject PauseMenuUI;
+    public GameObject MainMenuUI;
+    public GameObject OptionsMenuUI;
+
+    public Button ResumeButton;
+    public Button OptionsButton;
+    public Button BackToMainButton;
 
     private PlayerControls _playerControls;
 
+    private const string PAUSE_MENU = "PauseMenu";
+
     private void Start()
     {
-        PauseMenuUI.SetActive(false);    
-    }
+        PauseMenuUI.SetActive(false);
 
-    void Update()
-    {
-        
+        ResumeButton.onClick.AddListener(OnResumeClicked);
+        OptionsButton.onClick.AddListener(OnOptionsClicked);
+        BackToMainButton.onClick.AddListener(OnOptionsClicked);
     }
 
 
@@ -30,19 +41,30 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
-
             Time.timeScale = 1f;
         }
     }
 
-    //public void TogglePauseMenu()
-    //{
-        
-    //}
-
-    public void BackToMain()
+    private void OnResumeClicked()
     {
         PauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    private void OnOptionsClicked()
+    {
+        UIManager.ShowMenu(UIManager.MenuType.OptionsMenuUI);
+
+        //PauseMenuUI.SetActive(false);
+        //OptionsMenuUI.SetActive(true);
+        //OptionsMenuUI.GetComponent<OptionsMenu>().LastMenu = PAUSE_MENU;
+    }
+
+    private void BackToMainClicked()
+    {
+        UIManager.ShowMenu(UIManager.MenuType.MainMenuUI);
+
+        //PauseMenuUI.SetActive(false);
         //MainMenuUI.SetActive(true);
     }
 }
