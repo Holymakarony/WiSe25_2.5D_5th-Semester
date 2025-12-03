@@ -71,6 +71,12 @@ public class CS_PlayerController : MonoBehaviour
 
         _movement = new Vector3(x, 0, z).normalized;
 
+        if (_playerControls.Player.Pause.IsPressed())
+        {
+            GameObject.FindFirstObjectByType<PauseMenu>().Pause(!GameObject.FindFirstObjectByType<PauseMenu>().GameIsPaused);
+        }
+       
+
         if (_playerControls.Player.Sprint.IsPressed() == true)
         {
             Sprint();
