@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
+    public UIManager UIManager;
+
     public GameObject OptionsMenuUI;
     public GameObject PauseMenuUI;
     public GameObject MainMenuUI;
@@ -25,7 +27,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OnBackButtonClicked()
     {
-        
+       gameObject.SetActive(false);
+       PauseMenuUI.SetActive(true);
 
         //if (LastMenu == "PAUSE_MENU")
         //{

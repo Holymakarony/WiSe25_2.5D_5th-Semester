@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public UIManager UIManager;
+    //public UIManager UIManager;
+
 
     public bool GameIsPaused = false;
     public GameObject PauseMenuUI;
@@ -22,11 +23,11 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        PauseMenuUI.SetActive(false);
+        gameObject.SetActive(false);
 
         ResumeButton.onClick.AddListener(OnResumeClicked);
         OptionsButton.onClick.AddListener(OnOptionsClicked);
-        BackToMainButton.onClick.AddListener(OnOptionsClicked);
+        BackToMainButton.onClick.AddListener(OnBackToMainClicked);
     }
 
 
@@ -47,24 +48,23 @@ public class PauseMenu : MonoBehaviour
 
     private void OnResumeClicked()
     {
-        PauseMenuUI.SetActive(false);
+        gameObject.SetActive(false);
         Time.timeScale = 1f;
     }
 
     private void OnOptionsClicked()
     {
-        UIManager.ShowMenu(UIManager.MenuType.OptionsMenuUI);
+        //UIManager.ShowMenu(UIManager.MenuType.OptionsMenuUI);
 
-        //PauseMenuUI.SetActive(false);
-        //OptionsMenuUI.SetActive(true);
-        //OptionsMenuUI.GetComponent<OptionsMenu>().LastMenu = PAUSE_MENU;
+        gameObject.SetActive(false);
+        OptionsMenuUI.SetActive(true);
     }
 
-    private void BackToMainClicked()
+    private void OnBackToMainClicked()
     {
-        UIManager.ShowMenu(UIManager.MenuType.MainMenuUI);
+        //UIManager.ShowMenu(UIManager.MenuType.MainMenuUI);
 
-        //PauseMenuUI.SetActive(false);
-        //MainMenuUI.SetActive(true);
+        gameObject.SetActive(false);
+        MainMenuUI.SetActive(true);
     }
 }

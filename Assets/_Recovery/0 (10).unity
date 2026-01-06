@@ -34564,7 +34564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -35.329224, y: -117}
+  m_AnchoredPosition: {x: -35.329224, y: -141}
   m_SizeDelta: {x: 377.3416, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &646888233
@@ -74364,7 +74364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75, y: 222}
+  m_AnchoredPosition: {x: -75, y: 253}
   m_SizeDelta: {x: 2048, y: 649}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367469567
@@ -106839,6 +106839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f1d18da36de2746bff29607ff2b6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  UIManager: {fileID: 2079674224}
   GameIsPaused: 0
   PauseMenuUI: {fileID: 1997665138}
   MainMenuUI: {fileID: 926369011}
