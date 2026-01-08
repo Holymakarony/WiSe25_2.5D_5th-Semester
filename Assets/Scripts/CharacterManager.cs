@@ -13,7 +13,6 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI CornerPopUpTitle;
     [SerializeField] public TextMeshProUGUI CornerPopUpText;
 
-    
     private bool infrontOfPartyMember;
     [AllowNull]private GameObject joinableMember; // idk ob das [AllowNull] wichtig ist, maybe mal Marvin oder Kamil fragen, braucht zum funktionieren: using System.Diagnostics.CodeAnalysis; !!!
     private PlayerControls playerControls;

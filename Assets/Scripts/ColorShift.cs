@@ -22,17 +22,20 @@ public class ColorShift : MonoBehaviour
     private Component GlobalVolume;
     private ColorAdjustments _colorAdjustments;
     private float StartSaturation = -100f;
+    private float currentSaturation;
 
     void Start()
     {
         GetComponent<Volume>().profile.TryGet<ColorAdjustments>(out _colorAdjustments);
         _colorAdjustments.saturation.Override(-100f);
+        currentSaturation = -100f;
     }
 
     public void UpdateSaturation()
     {
-        float currentSaturation = _colorAdjustments.saturation.value;
+        currentSaturation = _colorAdjustments.saturation.value;
+        // GameObject.FindFirstObjectByType<PartyManager>().savedSaturation = currentSaturation + 66f;
         _colorAdjustments.saturation.Override(currentSaturation + 66f);
-            
+        
     }
 }
