@@ -89,6 +89,7 @@ public class CS_PlayerController : MonoBehaviour
 
         if (_playerControls.Player.Sprint.IsPressed() == true)
         {
+            print("SPRINTING");
             Sprint();
         }
         else
