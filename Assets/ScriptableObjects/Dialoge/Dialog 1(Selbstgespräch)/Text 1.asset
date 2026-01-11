@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Gretel
   DisplayLeft: 1
-  Text: "hm, das sieht bedenklich aus, ich sollte wirklich schnell mit Natalie sprechen\u2026"
+  Text: "Hm, das sieht bedenklich aus, ich sollte wirklich schnell mit Natalie sprechen\u2026"
   quest: {fileID: 0}
