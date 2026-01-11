@@ -69,6 +69,9 @@ public class BattleSystem : MonoBehaviour
                     case BattleEntities.Action.Run:
                         yield return StartCoroutine(RunRoutine());
                         break;
+                    case BattleEntities.Action.Heal:
+                        yield return StartCoroutine(HealRoutine(i));
+                        break;
                     default:
                         Debug.Log("Error - incorrect battle action");
                         break;
@@ -171,6 +174,23 @@ public class BattleSystem : MonoBehaviour
                 bottomText.text = RUN_MESSAGE_FAIL;
                 yield return new WaitForSeconds(TURN_DURATION); 
             }
+        }
+    }
+
+    private IEnumerator HealRoutine(int i)
+    {
+        if (state == BattleState.Battle)
+        {
+            allBattlers[i].CurrHealth += 10;
+            if (allBattlers[i].CurrHealth > allBattlers[i].MaxHealth)
+            {
+                allBattlers[i].CurrHealth = allBattlers[i].MaxHealth;
+            }
+            SaveHealth();
+            allBattlers[i].UpdateUI();
+            bottomText.text = "You've healed 10 health points";
+            yield return new WaitForSeconds(TURN_DURATION);
+
         }
     }
 
@@ -357,12 +377,36 @@ public class BattleSystem : MonoBehaviour
             ShowBattleMenu();
         }
     }
+
+    public void SelectHealAction()
+    {
+        state = BattleState.Selection;
+        // set current members target
+        BattleEntities currentPlayerEntity = playerBattlers[currentPlayer];
+        // tell battle system member wants to run
+        currentPlayerEntity.BattleAction = BattleEntities.Action.Heal;
+
+        battleMenu.SetActive(false);
+        // increment through all party members 
+        currentPlayer++;
+        
+        if (currentPlayer >= playerBattlers.Count) // if all members have selected action
+        {
+            // start battle
+            StartCoroutine(BattleRoutine());
+        }
+        else
+        {
+            enemySelectionMenu.SetActive(false); // else show menu for next player
+            ShowBattleMenu();
+        }
+    }
 }
 
 [System.Serializable]
 public class BattleEntities
 {
-    public enum Action {Attack, Run}
+    public enum Action {Attack, Run, Heal}
     public Action BattleAction;
 
     public string Name;
