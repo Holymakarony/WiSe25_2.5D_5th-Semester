@@ -18,8 +18,10 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private List<BattleEntities> playerBattlers = new List<BattleEntities>();
     [Header("UI")]
     [SerializeField] private GameObject[] enemySelectionButtons;
+    [SerializeField] private GameObject[] enemySpecialSelectionButtons;
     [SerializeField] private GameObject battleMenu;
     [SerializeField] private GameObject enemySelectionMenu;
+    [SerializeField] private GameObject enemySpecialSelectionMenu;
     [SerializeField] private TextMeshProUGUI actionText;
     [SerializeField] private GameObject bottomTextPopUp;
     [SerializeField] private TextMeshProUGUI bottomText;
@@ -53,9 +55,10 @@ public class BattleSystem : MonoBehaviour
     private IEnumerator BattleRoutine()
     {
         enemySelectionMenu.SetActive(false); // enemy selection menu disabled
+        enemySpecialSelectionMenu.SetActive(false); // enemy special selection menu disabled
         state = BattleState.Battle; // change our state to the battle state
         bottomTextPopUp.SetActive(true); // enable our bottom text
-        
+        DetermineBattleOrder();
         // loop though all battlers
             //-> do appropiate action
         for (int i = 0; i < allBattlers.Count; i++)
@@ -72,6 +75,12 @@ public class BattleSystem : MonoBehaviour
                     case BattleEntities.Action.Heal:
                         yield return StartCoroutine(HealRoutine(i));
                         break;
+                    case BattleEntities.Action.SpecialAttack:
+                        yield return StartCoroutine(SpecialAttackRoutine(i));
+                        break;
+                    case BattleEntities.Action.Block:
+                        yield return StartCoroutine(BlockRoutine(i));
+                        break;
                     default:
                         Debug.Log("Error - incorrect battle action");
                         break;
@@ -86,6 +95,11 @@ public class BattleSystem : MonoBehaviour
             bottomTextPopUp.SetActive(false);
             currentPlayer = 0;
             ShowBattleMenu();
+
+            for (int i = 0; i < allBattlers.Count; i++)
+            {
+                allBattlers[i].IsBlocking = false;
+            }
         }
 
         yield return null;
@@ -188,9 +202,53 @@ public class BattleSystem : MonoBehaviour
             }
             SaveHealth();
             allBattlers[i].UpdateUI();
-            bottomText.text = "You've healed 10 health points";
+            bottomText.text = string.Format("{0} has healed 10 health points.", allBattlers[i].Name);
             yield return new WaitForSeconds(TURN_DURATION);
 
+        }
+    }
+
+    private IEnumerator BlockRoutine(int i)
+    {
+        if (state == BattleState.Battle)
+        {
+            allBattlers[i].IsBlocking = true;
+            bottomText.text = string.Format("{0} is blocking.", allBattlers[i].Name);
+            yield return new WaitForSeconds(TURN_DURATION);
+        }
+    }
+
+    private IEnumerator SpecialAttackRoutine(int i)
+    {
+        // players turn
+        if (allBattlers[i].IsPlayer == true)
+        {
+            BattleEntities currAttacker = allBattlers[i];
+            if (allBattlers[currAttacker.Target].CurrHealth <= 0)
+            {
+                currAttacker.SetTarget(GetRandomEnemy());
+            }
+
+            BattleEntities currTarget = allBattlers[currAttacker.Target];
+            
+            SpecialAttackAction(currAttacker, currTarget); // attack selected enemy (attack action)
+            yield return new WaitForSeconds(TURN_DURATION); // wait
+            // kill enemy
+            if (currTarget.CurrHealth <= 0)
+            {
+                bottomText.text = string.Format("{0} defeated {1}.", currAttacker.Name, currTarget.Name);
+                yield return new WaitForSeconds(TURN_DURATION); // wait
+                enemyBattlers.Remove(currTarget);
+                FindFirstObjectByType<QuestManager>().CheckQuestStatus(currTarget.Name);
+            }
+            // if no enemies remain -> won
+            if (enemyBattlers.Count <= 0)
+            {
+                state = BattleState.Won;
+                bottomText.text = WIN_MESSAGE;
+                yield return new WaitForSeconds(TURN_DURATION); // wait
+                SceneManager.LoadScene(OVERWORLD_SCENE);
+            }
         }
     }
 
@@ -259,6 +317,7 @@ public class BattleSystem : MonoBehaviour
     public void ShowEnemySelectionMenu()
     {
         // disable the battle menu + set enemy selection buttons + enable selection menu
+        DetermineBattleOrder();
         battleMenu.SetActive(false);
         SetEnemySelectionButtons();
         enemySelectionMenu.SetActive(true);
@@ -302,15 +361,91 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    public void ShowEnemySpecialSelectionMenu()
+    {
+        // disable the battle menu + set special enemy selection buttons + enable special selection menu
+        DetermineBattleOrder();
+        battleMenu.SetActive(false);
+        SetEnemySpecialSelectionButtons();
+        enemySpecialSelectionMenu.SetActive(true);
+
+    }
+
+    private void SetEnemySpecialSelectionButtons()
+    {
+        //  disable all buttons + enable only needed buttons + change selection text to enemy names
+        for (int i = 0; i < enemySpecialSelectionButtons.Length; i++)
+        {
+            enemySpecialSelectionButtons[i].SetActive(false);
+        }
+
+        for (int j = 0; j < enemyBattlers.Count; j++)
+        {
+            enemySpecialSelectionButtons[j].SetActive(true);
+            enemySpecialSelectionButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = enemyBattlers[j].Name;
+        }
+    }
+
+    public void SelectSpecialEnemy(int currentEnemy)
+    {
+        // set current members target
+        BattleEntities currentPlayerEntity = playerBattlers[currentPlayer];
+        currentPlayerEntity.SetTarget(allBattlers.IndexOf(enemyBattlers[currentEnemy]));
+        // tell battle system member wants to attack 
+        currentPlayerEntity.BattleAction = BattleEntities.Action.SpecialAttack;
+        // increment through all party members 
+        currentPlayer++;
+        
+        if (currentPlayer >= playerBattlers.Count) // if all members have selected action
+        {
+            // start battle
+            StartCoroutine(BattleRoutine());
+        }
+        else
+        {
+            enemySpecialSelectionMenu.SetActive(false); // else show menu for next player
+            ShowBattleMenu();
+        }
+    }
+
     private void AttackAction(BattleEntities currAttacker, BattleEntities currTarget)
     {
-        int damage = currAttacker.Strenght; // get damage (can use an algorithm)
+        if (currTarget.IsBlocking == false)
+        {
+            int damage = currAttacker.Strenght; // get damage (can use an algorithm)
+            currAttacker.BattleVisuals.PlayAttackAnimation(); // play attack animation
+            currTarget.CurrHealth -= damage; // deal damage
+            currTarget.BattleVisuals.PlayHitAnimation();// target play hit animation
+            currTarget.UpdateUI(); // update UI
+            bottomText.text = string.Format("{0} attacks {1} for {2} damage", currAttacker.Name, currTarget.Name, damage);
+            SaveHealth();
+        }
+        else if (currTarget.IsBlocking == true)
+        {
+            currAttacker.BattleVisuals.PlayAttackAnimation(); // play attack animation
+            // currTarget.BattleVisuals.PlayBlockAnimation(); // play block animation if attacked
+            bottomText.text = string.Format("{0} blocked the attack from {1}", currTarget.Name, currAttacker.Name);
+        }
+    }
+
+    private void SpecialAttackAction(BattleEntities currAttacker, BattleEntities currTarget)
+    {
+        int damage = currAttacker.Strenght + 3; // maybe spaeter noch changen, balancing wise, idk
         currAttacker.BattleVisuals.PlayAttackAnimation(); // play attack animation
-        currTarget.CurrHealth -= damage; // deal damage
-        currTarget.BattleVisuals.PlayHitAnimation();// target play hit animation
-        currTarget.UpdateUI(); // update UI
-        bottomText.text = string.Format("{0} attacks {1} for {2} damage", currAttacker.Name, currTarget.Name, damage);
-        SaveHealth();
+        int hitChance = Random.Range(0, 10);
+        if(hitChance <= 7)
+        {
+            currTarget.CurrHealth -= damage; // deal damage
+            currTarget.BattleVisuals.PlayHitAnimation();// target play hit animation
+            currTarget.UpdateUI(); // update UI
+            bottomText.text = string.Format("{0} attacks {1} for {2} damage", currAttacker.Name, currTarget.Name, damage);
+            SaveHealth();
+        }
+        else if (hitChance > 7)
+        {
+            currTarget.BattleVisuals.PlayHitAnimation();// target play hit animation
+            bottomText.text = string.Format("{0} missed {1}", currAttacker.Name, currTarget.Name);
+        }
     }
 
     private int GetRandomPartyMember()
@@ -352,6 +487,15 @@ public class BattleSystem : MonoBehaviour
     private void DetermineBattleOrder()
     {
         allBattlers.Sort((bi1, bi2) => -bi1.Initiative.CompareTo(bi2.Initiative)); // sorts list by initiative starting from highest
+
+        for (int i = 0; i < allBattlers.Count; i++)
+        {
+            if(allBattlers[i].GetsPriority == true)
+            {
+                allBattlers[i].GetsPriority = false;
+                allBattlers[i].Initiative /= 20;
+            }
+        }
     }
 
     public void SelectRunAction()
@@ -385,7 +529,33 @@ public class BattleSystem : MonoBehaviour
         BattleEntities currentPlayerEntity = playerBattlers[currentPlayer];
         // tell battle system member wants to run
         currentPlayerEntity.BattleAction = BattleEntities.Action.Heal;
+        currentPlayerEntity.GetsPriority = true;
+        currentPlayerEntity.Initiative *= 20;
+        battleMenu.SetActive(false);
+        // increment through all party members 
+        currentPlayer++;
+        
+        if (currentPlayer >= playerBattlers.Count) // if all members have selected action
+        {
+            // start battle
+            StartCoroutine(BattleRoutine());
+        }
+        else
+        {
+            enemySelectionMenu.SetActive(false); // else show menu for next player
+            ShowBattleMenu();
+        }
+    }
 
+    public void SelectBlockAction()
+    {
+        state = BattleState.Selection;
+        // set current members target
+        BattleEntities currentPlayerEntity = playerBattlers[currentPlayer];
+        // tell battle system member wants to run
+        currentPlayerEntity.BattleAction = BattleEntities.Action.Block;
+        currentPlayerEntity.GetsPriority = true;
+        currentPlayerEntity.Initiative *= 20;
         battleMenu.SetActive(false);
         // increment through all party members 
         currentPlayer++;
@@ -406,7 +576,7 @@ public class BattleSystem : MonoBehaviour
 [System.Serializable]
 public class BattleEntities
 {
-    public enum Action {Attack, Run, Heal}
+    public enum Action {Attack, Run, Heal, SpecialAttack, Block}
     public Action BattleAction;
 
     public string Name;
@@ -418,6 +588,8 @@ public class BattleEntities
     public bool IsPlayer;
     public BattleVisuals BattleVisuals;
     public int Target;
+    public bool IsBlocking = false;
+    public bool GetsPriority = false;
 
     public void SetEntitiesValues(string name, int currHealth, int maxHealth, int initiative, int strenght, int level, bool isPlayer)
     {
