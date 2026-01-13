@@ -13,7 +13,6 @@ public class CS_PlayerController : MonoBehaviour
     [SerializeField] private int _minStepsToEncounter;
     [SerializeField] private int _maxStepsToEncounter;
 
-
     private bool canMove = true;
     private PlayerControls _playerControls;
     private Rigidbody _rb;

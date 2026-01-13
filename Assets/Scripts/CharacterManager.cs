@@ -24,7 +24,9 @@ public class CharacterManager : MonoBehaviour
 
     // Dialogue Prototype
     private bool infrontOfDialogue;
+    private bool inDialogueTrigger;
     [AllowNull]private GameObject dialogueMember;
+    private GameObject dialogueTrigger;
 
     private bool infrontOfHouse;
     
@@ -73,7 +75,10 @@ public class CharacterManager : MonoBehaviour
         // Dialoge Prototype
         else if (infrontOfDialogue == true)
         {
-            dialogueMember.GetComponent<DialoguePlayer>().PlayDialogue();
+            if (dialogueMember.GetComponent<DialoguePlayer>().canDisplayDialogue == true)
+            {
+                dialogueMember.GetComponent<DialoguePlayer>().PlayDialogue();
+            }
         }
         else if (infrontOfEnemy == true)
         {
@@ -83,6 +88,13 @@ public class CharacterManager : MonoBehaviour
         else if (infrontOfHouse == true)
         {
             FindFirstObjectByType<CS_PlayerController>().LoadGretelHouse();
+        }
+        else if (inDialogueTrigger == true)
+        {
+            if (dialogueTrigger.GetComponent<DialoguePlayer>().canDisplayDialogue == true) 
+            {
+                dialogueTrigger.GetComponent<DialoguePlayer>().PlayDialogue();
+            }
         }
     }
 
@@ -172,6 +184,18 @@ public class CharacterManager : MonoBehaviour
         {
             infrontOfHouse = true;
         }
+
+        else if (other.gameObject.tag == "EnterTrigger")
+        {
+            inDialogueTrigger = true;
+            dialogueTrigger = other.gameObject;
+            dialogueTrigger.GetComponent<EnterTrigger>().TriggerReaction();
+        }
+        else if(other.gameObject.tag == "QuestTrigger")
+        {
+            FindFirstObjectByType<QuestManager>().CheckQuestStatus(other.gameObject.name);
+            Destroy(other.gameObject);
+        }
     }
 
     private void OnTriggerExit(Collider other) 
@@ -201,6 +225,12 @@ public class CharacterManager : MonoBehaviour
         else if (other.gameObject.tag == "House")
         {
             infrontOfHouse = false;
+        }
+
+        else if (other.gameObject.tag == "EnterTrigger")
+        {
+            inDialogueTrigger = false;
+            dialogueTrigger = null;
         }
     }
 }

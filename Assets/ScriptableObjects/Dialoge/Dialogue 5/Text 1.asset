@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Gretel
   DisplayLeft: 1
-  Text: "Hm, das sieht bedenklich aus, ich sollte wirklich schnell mit Natalie sprechen\u2026"
-  quest: {fileID: 11400000, guid: 8d4f1e9b17b45cf41bf7a3140855fde9, type: 2}
+  Text: Hmm, vielleicht sollten wir die Festung im Osten mal untersuchen.
+  quest: {fileID: 11400000, guid: 9e040dcdb6f4de74298337394a2fc8c8, type: 2}

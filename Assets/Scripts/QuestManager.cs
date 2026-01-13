@@ -15,11 +15,30 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI QuestCornerTitle;
     [SerializeField] private TextMeshProUGUI QuestCornerDescription;
     
+    public bool showMainMenu = true;
+
     private const string ACTIVATED_MESSAGE = " activated";
     private const string COMPLETED_MESSAGE = " completed"; 
+
+    private static GameObject instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    /*void Start()
     {
+        DontDestroyOnLoad(gameObject);
+    }*/
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            showMainMenu = false;
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this.gameObject;
+        }
+
         DontDestroyOnLoad(gameObject);
     }
 

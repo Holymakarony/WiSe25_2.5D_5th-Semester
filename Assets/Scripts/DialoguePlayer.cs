@@ -22,6 +22,7 @@ public class DialoguePlayer : MonoBehaviour
     private bool dialogueIsPlaying;
     private int dialogueIndex = 0; 
     
+    public bool canDisplayDialogue = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -63,6 +64,7 @@ public class DialoguePlayer : MonoBehaviour
                 FindFirstObjectByType<QuestManager>().AddNewQuest(dialogueTexts[dialogueIndex].quest);
             }
             FindFirstObjectByType<QuestManager>().CheckQuestStatus(NPCName);
+            canDisplayDialogue = false;
         }
     }
 

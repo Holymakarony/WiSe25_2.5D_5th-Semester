@@ -10,15 +10,22 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject SunBeamAnimation;
 
     [SerializeField] private GameObject playerController;
+    [SerializeField] private GameObject questManager; 
 
     void Start()
     {
         gameObject.SetActive(true);
         //Time.timeScale = 0f;
-
+        print("started");
+        print(questManager.GetComponent<QuestManager>().showMainMenu);
         playerController.GetComponent<CS_PlayerController>().SetCanMove(false);
-
         StartButton.onClick.AddListener(OnStartClicked);
+
+        if(questManager.GetComponent<QuestManager>().showMainMenu == false)
+        {
+            OnStartClicked();
+        }
+        
     }
 
     void Update()
@@ -30,6 +37,7 @@ public class MainMenu : MonoBehaviour
     {
         //Time.timeScale = 1f;
         playerController.GetComponent<CS_PlayerController>().SetCanMove(true);
+        questManager.GetComponent<QuestManager>().showMainMenu = false;
         gameObject.SetActive(false);
     }
 

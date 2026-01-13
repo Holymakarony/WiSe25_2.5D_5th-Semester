@@ -15,6 +15,6 @@ MonoBehaviour:
   Title: Geh in den Wald
   QuestType: 0
   Desc: "Geh in den Wald im S\xFCden der Stadt"
-  Target: null
+  Target: QuestTrigger
   currentAmount: 0
-  targetAmount: 0
+  targetAmount: 1

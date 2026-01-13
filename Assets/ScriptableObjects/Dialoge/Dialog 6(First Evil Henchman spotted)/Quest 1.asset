@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f847d14b8298f4b89cc8461b3cd2d1, type: 3}
   m_Name: Quest 1
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  Title: Finde Hansel
+  Title: "Konfrontiere den merkw\xFCrdigen Mann"
   QuestType: 1
-  Desc: "Such Hansel auf dem \xDCbungsplatz im Norden und trainiere an einer Strohpuppe"
+  Desc: "Konfrontiere den merkw\xFCrdigen Typen in Strumpfhosen"
   Target: Slime
   currentAmount: 0
   targetAmount: 1
