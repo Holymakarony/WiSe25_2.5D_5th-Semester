@@ -1,8 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private Slider MasterSlider;
+    [SerializeField] private Slider MusicSlider;
+    [SerializeField] private Slider SFXSlider;
+
+    [SerializeField] private Button BackButton;
+
+    [SerializeField] private GameObject PauseMenuUI;
+
     void Start()
     {
         

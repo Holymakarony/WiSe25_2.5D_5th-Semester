@@ -9,17 +9,21 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] private GameObject SunBeamAnimation;
 
+    [SerializeField] private GameObject CreditsMenuUI;
+
     [SerializeField] private GameObject playerController;
     [SerializeField] private GameObject questManager; 
 
     void Start()
     {
         gameObject.SetActive(true);
-        //Time.timeScale = 0f;
+
         print("started");
         print(questManager.GetComponent<QuestManager>().showMainMenu);
         playerController.GetComponent<CS_PlayerController>().SetCanMove(false);
+
         StartButton.onClick.AddListener(OnStartClicked);
+        CreditsButton.onClick.AddListener(OnCreditsClicked);
 
         if(questManager.GetComponent<QuestManager>().showMainMenu == false)
         {
@@ -43,8 +47,8 @@ public class MainMenu : MonoBehaviour
 
     private void OnCreditsClicked()
     {
-        //gameObject.SetActive (false);
-        //CreditsMenu.SetActive(true);
+        gameObject.SetActive(false);
+        CreditsMenuUI.SetActive(true);
     }
 
     private void OnQuitClicked()
