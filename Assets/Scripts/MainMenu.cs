@@ -16,8 +16,6 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        gameObject.SetActive(true);
-
         print("started");
         print(questManager.GetComponent<QuestManager>().showMainMenu);
         playerController.GetComponent<CS_PlayerController>().SetCanMove(false);
@@ -39,7 +37,6 @@ public class MainMenu : MonoBehaviour
 
     private void OnStartClicked()
     {
-        //Time.timeScale = 1f;
         playerController.GetComponent<CS_PlayerController>().SetCanMove(true);
         questManager.GetComponent<QuestManager>().showMainMenu = false;
         gameObject.SetActive(false);

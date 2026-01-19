@@ -13588,10 +13588,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 90077798}
     - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 333441392}
-    - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
       propertyPath: speakerLeft
       value: 
       objectReference: {fileID: 1141268336}
@@ -16039,7 +16035,6 @@ MonoBehaviour:
   interactPrompt: {fileID: 2119813945}
   popUpLeft: {fileID: 965557541}
   popUpRight: {fileID: 90077798}
-  gameManager: {fileID: 0}
   canDisplayDialogue: 1
 --- !u!4 &259749759
 Transform:
@@ -20268,10 +20263,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 90077798}
     - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 333441392}
-    - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
       propertyPath: speakerLeft
       value: 
       objectReference: {fileID: 1141268336}
@@ -21098,51 +21089,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2012043566}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &333441392
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 333441394}
-  - component: {fileID: 333441393}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &333441393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333441392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452e3f37e288e7440a42cf60840c8521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  CompletedDialoguePlayerNames: []
---- !u!4 &333441394
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333441392}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.51302, y: 19.99634, z: 94.74736}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338596368
 GameObject:
@@ -34114,7 +34060,6 @@ MonoBehaviour:
   interactPrompt: {fileID: 819830559}
   popUpLeft: {fileID: 965557541}
   popUpRight: {fileID: 90077798}
-  gameManager: {fileID: 333441392}
   canDisplayDialogue: 1
 --- !u!1 &512349945
 GameObject:
@@ -44750,7 +44695,6 @@ MonoBehaviour:
   interactPrompt: {fileID: 1828226106}
   popUpLeft: {fileID: 965557541}
   popUpRight: {fileID: 90077798}
-  gameManager: {fileID: 0}
   canDisplayDialogue: 1
 --- !u!4 &719090212
 Transform:
@@ -56778,7 +56722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d057f3c79890042ba2d07ca911cee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OptionsMenu
-  mixer: {fileID: 24100000, guid: 50010f231237fbe4c8053448c8f9a7ae, type: 2}
+  mixer: {fileID: 0}
   MasterSlider: {fileID: 1154267573}
   MusicSlider: {fileID: 1483978184}
   SFXSlider: {fileID: 2133266231}
@@ -63854,7 +63798,6 @@ MonoBehaviour:
   interactPrompt: {fileID: 1645349799}
   popUpLeft: {fileID: 965557541}
   popUpRight: {fileID: 90077798}
-  gameManager: {fileID: 0}
   canDisplayDialogue: 1
 --- !u!1 &1102531125
 GameObject:
@@ -66464,7 +66407,6 @@ MonoBehaviour:
   interactPrompt: {fileID: 1688547036}
   popUpLeft: {fileID: 965557541}
   popUpRight: {fileID: 90077798}
-  gameManager: {fileID: 0}
   canDisplayDialogue: 1
 --- !u!4 &1144736551
 Transform:
@@ -101214,10 +101156,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 90077798}
     - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 333441392}
-    - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
       propertyPath: speakerLeft
       value: 
       objectReference: {fileID: 1141268336}
@@ -126577,7 +126515,6 @@ MonoBehaviour:
   interactPrompt: {fileID: 95734606}
   popUpLeft: {fileID: 965557541}
   popUpRight: {fileID: 90077798}
-  gameManager: {fileID: 333441392}
   canDisplayDialogue: 1
 --- !u!1 &1969614565
 GameObject:
@@ -136818,10 +136755,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 90077798}
     - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 333441392}
-    - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
       propertyPath: speakerLeft
       value: 
       objectReference: {fileID: 1141268336}
@@ -137290,10 +137223,6 @@ PrefabInstance:
       propertyPath: popUpRight
       value: 
       objectReference: {fileID: 90077798}
-    - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 333441392}
     - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
       propertyPath: speakerLeft
       value: 
@@ -137936,10 +137865,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 90077798}
     - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 333441392}
-    - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
       propertyPath: speakerLeft
       value: 
       objectReference: {fileID: 1141268336}
@@ -138347,7 +138272,6 @@ SceneRoots:
   - {fileID: 902573421}
   - {fileID: 517592511}
   - {fileID: 797979562}
-  - {fileID: 333441394}
   - {fileID: 1314907028}
   - {fileID: 610978117}
   - {fileID: 1445600396}

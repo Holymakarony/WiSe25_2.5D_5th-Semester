@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Button OptionsButton;
     [SerializeField] private Button BackToMainButton;
 
+    [SerializeField] private GameObject Player;
     [SerializeField] private GameObject MainMenuUI;
     [SerializeField] private GameObject OptionsMenuUI;
 
@@ -19,15 +20,11 @@ public class PauseMenu : MonoBehaviour
         BackToMainButton.onClick.AddListener(OnBackToMainClicked);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-            }
-
     private void OnResumeClicked()
     {
         gameObject.SetActive(false);
         Time.timeScale = 1f;
+        Player.GetComponent<CS_PlayerController>().SetCanMove(true);
     }   
     
     private void OnOptionsClicked()

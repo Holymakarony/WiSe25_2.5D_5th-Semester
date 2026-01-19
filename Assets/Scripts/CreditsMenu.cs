@@ -7,16 +7,13 @@ public class CreditsMenu : MonoBehaviour
     [SerializeField] private Button MaxCreditsButton;
     [SerializeField] private Button BackButton;
 
+    [SerializeField] private GameObject MainMenuUI;
+
     void Start()
     {
         NancyCreditsButton.onClick.AddListener(OnNancyCreditsClicked);
         MaxCreditsButton.onClick.AddListener(OnMaxCreditsClicked);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        BackButton.onClick.AddListener(OnBackButtonClicked);
     }
 
     private void OnNancyCreditsClicked()
@@ -27,5 +24,11 @@ public class CreditsMenu : MonoBehaviour
     private void OnMaxCreditsClicked()
     {
         Application.OpenURL("https://holymakarony.itch.io");
+    }
+
+    private void OnBackButtonClicked()
+    {
+        gameObject.SetActive(false);
+        MainMenuUI.SetActive(true);
     }
 }
