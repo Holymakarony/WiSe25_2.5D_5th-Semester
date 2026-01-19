@@ -63,6 +63,10 @@ public class DialoguePlayer : MonoBehaviour
             }
             FindFirstObjectByType<QuestManager>().CheckQuestStatus(NPCName);
             canDisplayDialogue = false;
+            if (interactPrompt)
+            {
+                interactPrompt.SetActive(false);
+            }
             gameManager.GetComponent<GameManager>().DialogueCompleted(gameObject.name);
         }
     }
@@ -87,14 +91,14 @@ public class DialoguePlayer : MonoBehaviour
 
     public void ShowInteractPrompt(bool showPrompt)
     {
+        if (!GameObject.FindFirstObjectByType<GameManager>().GetComponent<GameManager>().CompletedDialoguePlayerNames.Contains(gameObject.name))
+        {
+            interactPrompt.SetActive(showPrompt); // if bool showPrompt true = show, false = hide
+        }
         if (GameObject.FindFirstObjectByType<GameManager>().GetComponent<GameManager>().CompletedDialoguePlayerNames.Contains(gameObject.name))
         {
             canDisplayDialogue = false;
             interactPrompt.SetActive(false);
-        }
-        else if (canDisplayDialogue == true)
-        {
-            interactPrompt.SetActive(showPrompt); // if bool showPrompt true = show, false = hide
         }
     }
 }

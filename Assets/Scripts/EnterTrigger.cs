@@ -9,11 +9,10 @@ public class EnterTrigger : MonoBehaviour
     
     public void TriggerReaction()
     {
-        if (!doOnce)
+        if (!doOnce && !GameObject.FindFirstObjectByType<GameManager>().GetComponent<GameManager>().CompletedDialoguePlayerNames.Contains(gameObject.name))
         {
             doOnce = true;
             triggerEvent.Invoke();
-            print("Event triggered");
         }
     }
 }
