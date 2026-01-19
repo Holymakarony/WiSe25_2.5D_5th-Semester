@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class DialoguePlayer : MonoBehaviour
@@ -21,6 +22,7 @@ public class DialoguePlayer : MonoBehaviour
     private int dialogueIndex = 0; 
     
     public bool canDisplayDialogue = true;
+    public UnityEvent dialogueEvent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -67,6 +69,7 @@ public class DialoguePlayer : MonoBehaviour
             {
                 interactPrompt.SetActive(false);
             }
+            dialogueEvent.Invoke();
             gameManager.GetComponent<GameManager>().DialogueCompleted(gameObject.name);
         }
     }

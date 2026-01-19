@@ -3964,6 +3964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82717806}
   - component: {fileID: 82717805}
+  - component: {fileID: 82717807}
   - component: {fileID: 82717804}
   m_Layer: 0
   m_Name: JoinableCharacter
@@ -4024,6 +4025,48 @@ Transform:
   - {fileID: 8022449981822916946}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82717807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82717803}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b05a8e0ae98a54b81afe7b2b462d0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialoguePlayer
+  NPCName: Hansel
+  dialoguePopUp: {fileID: 969646942}
+  dialogueText: {fileID: 1341582650}
+  speakerLeft: {fileID: 1141268336}
+  speakerRight: {fileID: 1265624384}
+  dialogueTexts:
+  - {fileID: 11400000, guid: 6adc07638a75fd34685231d061ca390b, type: 2}
+  - {fileID: 11400000, guid: c023771bc7e83224ba9f559f5406d8a9, type: 2}
+  - {fileID: 11400000, guid: 2558e4e342c1f614da6ca45518b931c1, type: 2}
+  - {fileID: 11400000, guid: f26d6766a18b28a4f997044189c195e6, type: 2}
+  interactPrompt: {fileID: 2019389983}
+  popUpLeft: {fileID: 965557541}
+  popUpRight: {fileID: 90077798}
+  gameManager: {fileID: 333441392}
+  canDisplayDialogue: 1
+  dialogueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 82717805}
+        m_TargetAssemblyTypeName: JoinableCharacter, Assembly-CSharp
+        m_MethodName: JoinMember
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1317160259}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &85884172
 GameObject:
   m_ObjectHideFlags: 0
@@ -16041,6 +16084,9 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 0}
   canDisplayDialogue: 1
+  dialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &259749759
 Transform:
   m_ObjectHideFlags: 0
@@ -34116,6 +34162,9 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 333441392}
   canDisplayDialogue: 1
+  dialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &512349945
 GameObject:
   m_ObjectHideFlags: 0
@@ -44752,6 +44801,9 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 0}
   canDisplayDialogue: 1
+  dialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &719090212
 Transform:
   m_ObjectHideFlags: 0
@@ -63856,6 +63908,9 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 0}
   canDisplayDialogue: 1
+  dialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1102531125
 GameObject:
   m_ObjectHideFlags: 0
@@ -66466,6 +66521,9 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 0}
   canDisplayDialogue: 1
+  dialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1144736551
 Transform:
   m_ObjectHideFlags: 0
@@ -101261,6 +101319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueEnterTrigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5520530923895726712, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5560753992047749667, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.52
@@ -126579,6 +126641,9 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 333441392}
   canDisplayDialogue: 1
+  dialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1969614565
 GameObject:
   m_ObjectHideFlags: 0
