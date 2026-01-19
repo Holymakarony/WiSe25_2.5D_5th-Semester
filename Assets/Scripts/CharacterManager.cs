@@ -44,6 +44,7 @@ public class CharacterManager : MonoBehaviour
     void Start()
     {
         playerControls.Player.Interact.performed += _ => Interact();
+        playerControls.Player.Pause.performed += _ => PausePressed();
         SpawnOverworldMembers();
     }
     
@@ -96,6 +97,11 @@ public class CharacterManager : MonoBehaviour
                 dialogueTrigger.GetComponent<DialoguePlayer>().PlayDialogue();
             }
         }
+    }
+
+    private void PausePressed()
+    {
+        print("PAUSE PRESSED");
     }
 
     private void MemberJoined(PartyMemberInfo partyMember)
