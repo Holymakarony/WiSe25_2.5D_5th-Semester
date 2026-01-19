@@ -56722,7 +56722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d057f3c79890042ba2d07ca911cee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OptionsMenu
-  mixer: {fileID: 24100000, guid: 50010f231237fbe4c8053448c8f9a7ae, type: 2}
+  mixer: {fileID: 0}
   MasterSlider: {fileID: 1154267573}
   MusicSlider: {fileID: 1483978184}
   SFXSlider: {fileID: 2133266231}
