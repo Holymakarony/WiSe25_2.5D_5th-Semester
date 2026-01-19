@@ -57,7 +57,6 @@ public class QuestManager : MonoBehaviour
                 if (activeQuests[i].Target == target && activeQuests[i].currentAmount < activeQuests[i].targetAmount - 1)
                 {
                     activeQuests[i].currentAmount++;
-                    print("Collectable aufgesammelt");
                 }
                 else if(activeQuests[i].Target == target && activeQuests[i].currentAmount >= activeQuests[i].targetAmount - 1)
                 {

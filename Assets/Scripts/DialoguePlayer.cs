@@ -4,9 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-// Test
-// Lara stinkt D:
-
 public class DialoguePlayer : MonoBehaviour
 {
     [SerializeField] public string NPCName;
@@ -18,6 +15,7 @@ public class DialoguePlayer : MonoBehaviour
     [SerializeField] private GameObject interactPrompt;
     [SerializeField] private GameObject popUpLeft;
     [SerializeField] private GameObject popUpRight;
+    [SerializeField] private GameObject gameManager;
 
     private bool dialogueIsPlaying;
     private int dialogueIndex = 0; 
@@ -26,7 +24,7 @@ public class DialoguePlayer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -65,6 +63,7 @@ public class DialoguePlayer : MonoBehaviour
             }
             FindFirstObjectByType<QuestManager>().CheckQuestStatus(NPCName);
             canDisplayDialogue = false;
+            gameManager.GetComponent<GameManager>().DialogueCompleted(gameObject.name);
         }
     }
 
@@ -88,6 +87,14 @@ public class DialoguePlayer : MonoBehaviour
 
     public void ShowInteractPrompt(bool showPrompt)
     {
+        if (GameObject.FindFirstObjectByType<GameManager>().GetComponent<GameManager>().CompletedDialoguePlayerNames.Contains(gameObject.name))
+        {
+            canDisplayDialogue = false;
+            interactPrompt.SetActive(false);
+        }
+        else if (canDisplayDialogue == true)
+        {
             interactPrompt.SetActive(showPrompt); // if bool showPrompt true = show, false = hide
+        }
     }
 }
