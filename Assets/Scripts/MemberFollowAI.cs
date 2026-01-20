@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MemberFollowAI : MonoBehaviour
@@ -12,6 +13,16 @@ public class MemberFollowAI : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private const string IS_WALKING_PARAM = "IsWalking";
+
+    [Header("Footsteps")]
+    public AudioClip[] FootstepsClips;
+    public float stepInterval = 0.3f;
+
+    private AudioSource audioSource;
+    private float stepTimer = 0.0f;
+    private bool isSprinting;
+    private bool isWalking;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,9 +37,19 @@ public class MemberFollowAI : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, followTarget.position) > followDist)
         {
+            isWalking = true;
             // multiply speed by 3 if distance from player to follower > then sprintDistance
-            if (Vector3.Distance(transform.position, followTarget.position) > sprintDist){sprintMutliplier = 3;}
-            else if (Vector3.Distance(transform.position, followTarget.position) !> sprintDist){sprintMutliplier = 1;}
+            if (Vector3.Distance(transform.position, followTarget.position) > sprintDist)
+            {
+                sprintMutliplier = 3;
+                isSprinting = true;
+
+            }
+            else if (Vector3.Distance(transform.position, followTarget.position) !> sprintDist)
+            {
+                sprintMutliplier = 1;
+                isSprinting = false;
+            }
             // walk to player
             anim.SetBool(IS_WALKING_PARAM, true);
             float step = speed * sprintMutliplier * Time.deltaTime;
@@ -47,13 +68,50 @@ public class MemberFollowAI : MonoBehaviour
         {
             // stop walking + return to idle
             anim.SetBool(IS_WALKING_PARAM, false);
+            isWalking = false; 
             sprintMutliplier = 1;
         }
+
+        HandleFootsteps();
     }
 
     public void SetFollowDistance(float followDistance)
     {
         followDist = followDistance;
         sprintDist = followDist * 3;
+    }
+    private void HandleFootsteps()
+    {
+
+        if (!isWalking)
+        {
+            stepTimer = 0f;
+            return;
+        }
+
+        float currentStepInterval = stepInterval;
+
+        if (isSprinting)
+        {
+            currentStepInterval *= 0.6f;
+        }
+
+        stepTimer -= Time.deltaTime;
+
+        if (stepTimer <= 0f)
+        {
+            PlayFootsteps();
+            stepTimer = currentStepInterval;
+        }
+    }
+
+    private void PlayFootsteps()
+    {
+        if (FootstepsClips == null || FootstepsClips.Length == 0 || audioSource == null) return;
+
+        AudioClip clip = FootstepsClips[Random.Range(0, FootstepsClips.Length)];
+
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.PlayOneShot(clip);
     }
 }

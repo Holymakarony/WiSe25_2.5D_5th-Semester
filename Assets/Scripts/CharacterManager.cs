@@ -8,8 +8,10 @@ using UnityEngine.Rendering;
 public class CharacterManager : MonoBehaviour
 {
     [SerializeField] public GameObject joinPopUp;
-    [SerializeField] public TextMeshProUGUI joinPopUpText;
     [SerializeField] public GameObject CornerPopUp;
+    [SerializeField] public GameObject PauseMenuUI;
+
+    [SerializeField] public TextMeshProUGUI joinPopUpText;
     [SerializeField] public TextMeshProUGUI CornerPopUpTitle;
     [SerializeField] public TextMeshProUGUI CornerPopUpText;
 
@@ -101,7 +103,8 @@ public class CharacterManager : MonoBehaviour
 
     private void PausePressed()
     {
-        print("PAUSE PRESSED");
+        PauseMenuUI.SetActive(true);
+        FindFirstObjectByType<CS_PlayerController>().SetCanMove(false);
     }
 
     private void MemberJoined(PartyMemberInfo partyMember)

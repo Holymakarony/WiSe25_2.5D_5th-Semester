@@ -12306,7 +12306,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -250, y: -100}
-  m_SizeDelta: {x: 456, y: 318}
+  m_SizeDelta: {x: 459, y: 291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &182694724
 MonoBehaviour:
@@ -12328,7 +12328,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78771e10786abf0458bae6acdb616113, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c1b4992106be5c479b248418c09fc17, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -22536,7 +22536,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: John joined the party.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ad82e183cda698d4ebb920b5d1af1e6f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 079d37a6868c3dd42aeb7296b45cac92, type: 2}
   m_sharedMaterial: {fileID: 35420828559069579, guid: 079d37a6868c3dd42aeb7296b45cac92, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -22602,7 +22602,7 @@ MonoBehaviour:
   m_margin: {x: -848.55676, y: -72.07927, z: -844.67096, w: -71.46262}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &354873140
@@ -36198,7 +36198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 55.1}
+  m_AnchoredPosition: {x: 0, y: 61.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565073728
@@ -36248,8 +36248,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -36286,10 +36286,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -77.81781, y: 20.036743, z: -100.120514, w: -78.89549}
+  m_margin: {x: -77.81781, y: 0, z: -100.120514, w: -106.448715}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &565073729
@@ -108725,7 +108725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1672239574
 RectTransform:
   m_ObjectHideFlags: 0
@@ -124682,11 +124682,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7863657366452746653, guid: ddcc9c4794877b14d83c714e7db25e00, type: 3}
   m_PrefabInstance: {fileID: 1912954251}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1918821184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2671987348982741543, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
-  m_PrefabInstance: {fileID: 8022449981822916945}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1925395346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127653,7 +127648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 120.4}
+  m_AnchoredPosition: {x: 0, y: 109.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988319436
@@ -127741,7 +127736,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -66.33099, y: 0, z: -112.214874, w: -9.283936}
+  m_margin: {x: -66.33099, y: 0, z: -112.214874, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -138671,140 +138666,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5361885735702457087, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
-      propertyPath: FootstepsClips.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5361885735702457087, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
-      propertyPath: 'FootstepsClips.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: a970846e3cb4a464db00abf089500875, type: 3}
-    - target: {fileID: 5361885735702457087, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
-      propertyPath: 'FootstepsClips.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 9aeafeafe929f9b4a86a039b5076c43b, type: 3}
-    - target: {fileID: 5361885735702457087, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
-      propertyPath: 'FootstepsClips.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8300000, guid: e1d045167915eed46866fc7236603fcb, type: 3}
-    - target: {fileID: 5361885735702457087, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
-      propertyPath: 'FootstepsClips.Array.data[3]'
-      value: 
-      objectReference: {fileID: 8300000, guid: ecc78c3ef5792d44ca0253491e885900, type: 3}
-    - target: {fileID: 5361885735702457087, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
-      propertyPath: 'FootstepsClips.Array.data[4]'
-      value: 
-      objectReference: {fileID: 8300000, guid: ae736ba99c0e9204eb572dfa55fcdcd8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2671987348982741543, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8022449981822916950}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
 --- !u!4 &8022449981822916946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 638296319280140549, guid: 558a4e66a3970834ebed26e1d5bf0e81, type: 3}
   m_PrefabInstance: {fileID: 8022449981822916945}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &8022449981822916950
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918821184}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 7054346853882745554, guid: 50010f231237fbe4c8053448c8f9a7ae, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
