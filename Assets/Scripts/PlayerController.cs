@@ -29,6 +29,13 @@ public class CS_PlayerController : MonoBehaviour
     private const float TIME_PER_STEP = 0.5f;
     private const int SPRINT_MULTIPLIER = 3;
 
+    [Header("Footsteps")]
+    public AudioClip[] FootstepsClips;
+    public float stepInterval = 0.3f;
+
+    private AudioSource audioSource;
+    private float stepTimer = 0.0f;
+
     private void Awake()
     {
         _playerControls = new PlayerControls();
@@ -50,7 +57,9 @@ public class CS_PlayerController : MonoBehaviour
         _rb = gameObject.GetComponent<Rigidbody>();
         partyManager = GameObject.FindFirstObjectByType<PartyManager>();
 
-        if(partyManager.GetPosition() != Vector3.zero) // if there is a saved position for the player when the player controller loads in
+        audioSource = GetComponent<AudioSource>();
+
+        if (partyManager.GetPosition() != Vector3.zero) // if there is a saved position for the player when the player controller loads in
         {
             transform.position = partyManager.GetPosition(); // move player to saved position
         }
@@ -62,7 +71,7 @@ public class CS_PlayerController : MonoBehaviour
         float x = 0;
         float z = 0;
 
-        if(canMove)
+        if (canMove)
         {
             x = _playerControls.Player.Move.ReadValue<Vector2>().x;
             z = _playerControls.Player.Move.ReadValue<Vector2>().y;
@@ -101,6 +110,8 @@ public class CS_PlayerController : MonoBehaviour
         {
             _playerSprite.flipX = true;
         }
+
+        HandleFootsteps();
     }
 
     private void FixedUpdate()
@@ -118,7 +129,7 @@ public class CS_PlayerController : MonoBehaviour
                 _stepsInGrass++;
                 _stepTimer = 0;
 
-                if (_stepsInGrass>=_stepsToEncounter)
+                if (_stepsInGrass >= _stepsToEncounter)
                 {
                     partyManager.SetPosition(transform.position);  // save player position before encounter starts
                     SceneManager.LoadScene(BATTLE_SCENE);
@@ -153,10 +164,46 @@ public class CS_PlayerController : MonoBehaviour
         partyManager.SetPosition(transform.position);  // save player position before encounter starts
         SceneManager.LoadScene(BATTLE_SCENE);
     }
-    
+
     public void LoadGretelHouse()
     {
         partyManager.SetPosition(transform.position);
         SceneManager.LoadScene(GRETEL_HOUSE_SCENE);
+    }
+
+    private void HandleFootsteps()
+    {
+        bool isWalking = _movement.magnitude > 0.1f && canMove;
+
+        if (!isWalking)
+        {
+            stepTimer = 0f;
+            return;
+        }
+
+        float currentStepInterval = stepInterval;
+
+        if (_playerControls.Player.Sprint.IsPressed())
+        {
+            currentStepInterval *= 0.6f;
+        }
+
+        stepTimer -= Time.deltaTime;
+
+        if (stepTimer <= 0f)
+        {
+            PlayFootsteps();
+            stepTimer = currentStepInterval;
+        }
+    }
+
+    private void PlayFootsteps()
+    {
+        if (FootstepsClips == null || FootstepsClips.Length == 0 || audioSource == null) return;
+
+        AudioClip clip = FootstepsClips[Random.Range(0, FootstepsClips.Length)];
+
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.PlayOneShot(clip);
     }
 }
