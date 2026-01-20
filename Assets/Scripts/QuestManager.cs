@@ -14,7 +14,13 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject QuestCornerPopUp;
     [SerializeField] private TextMeshProUGUI QuestCornerTitle;
     [SerializeField] private TextMeshProUGUI QuestCornerDescription;
+    [Header("Quest Sounds")]
+    [SerializeField] private AudioClip QuestCompletedSound;
+    [SerializeField] private AudioClip QuestAcceptedSound;
     
+    private AudioSource audioSource;
+    private Quest newQuest;
+
     public bool showMainMenu = true;
 
     private const string ACTIVATED_MESSAGE = " activated";
@@ -40,6 +46,14 @@ public class QuestManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+            audioSource.spatialBlend = 0f;
+        }
     }
 
     // Update is called once per frame
@@ -81,19 +95,27 @@ public class QuestManager : MonoBehaviour
         }
     }
     
-    public void AddNewQuest(Quest quest)
+    public void AddNewQuest(Quest quest, float WaitForSeconds)
     {
-        if(activeQuests.Count < 3)
+        newQuest = quest;
+        Invoke("DelayQuest", WaitForSeconds);       
+    }
+
+    private void DelayQuest()
+    {
+        if (activeQuests.Count < 3)
         {
-            activeQuests.Add(quest);
-            quest.currentAmount = 0;
+            activeQuests.Add(newQuest);
+            newQuest.currentAmount = 0;
             // PopUp with Quest Title
             PopUp.SetActive(true);
-            PopUpText.text = quest.Title + ACTIVATED_MESSAGE;
+            PopUpText.text = newQuest.Title + ACTIVATED_MESSAGE;
             // add quest popup
             QuestCornerPopUp.SetActive(true);
-            QuestCornerTitle.text = quest.Title;
-            QuestCornerDescription.text = quest.Desc;
+            QuestCornerTitle.text = newQuest.Title;
+            QuestCornerDescription.text = newQuest.Desc;
+
+            PlaySound(QuestAcceptedSound);
         }
     }
 
@@ -115,6 +137,8 @@ public class QuestManager : MonoBehaviour
     public void QuestCompleted(Quest quest)
     {
         completedQuestQueue.Add(quest);
+
+        PlaySound(QuestCompletedSound);
     }
     
     public void UpdateCornerPopUp()
@@ -132,5 +156,11 @@ public class QuestManager : MonoBehaviour
         {
             QuestCornerPopUp.SetActive(false);
         }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip == null || audioSource == null) return;
+        audioSource.PlayOneShot(clip);
     }
 }

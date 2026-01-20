@@ -22,6 +22,9 @@ public class DialoguePlayer : MonoBehaviour
     private int dialogueIndex = 0; 
     
     public bool canDisplayDialogue = true;
+
+    public float WaitForSeconds = 1.5f;
+
     public UnityEvent dialogueEvent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -61,7 +64,7 @@ public class DialoguePlayer : MonoBehaviour
             
             if (dialogueTexts[dialogueIndex].quest)
             {
-                FindFirstObjectByType<QuestManager>().AddNewQuest(dialogueTexts[dialogueIndex].quest);
+                FindFirstObjectByType<QuestManager>().AddNewQuest(dialogueTexts[dialogueIndex].quest, WaitForSeconds);
             }
             FindFirstObjectByType<QuestManager>().CheckQuestStatus(NPCName);
             canDisplayDialogue = false;

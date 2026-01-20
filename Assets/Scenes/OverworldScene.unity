@@ -4052,6 +4052,7 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 333441392}
   canDisplayDialogue: 1
+  WaitForSeconds: 1.5
   dialogueEvent:
     m_PersistentCalls:
       m_Calls:
@@ -16084,6 +16085,7 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 0}
   canDisplayDialogue: 1
+  WaitForSeconds: 1.5
   dialogueEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -34195,6 +34197,7 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 333441392}
   canDisplayDialogue: 1
+  WaitForSeconds: 1.5
   dialogueEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -44834,6 +44837,7 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 0}
   canDisplayDialogue: 1
+  WaitForSeconds: 1.5
   dialogueEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -49383,6 +49387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 797979562}
   - component: {fileID: 797979561}
+  - component: {fileID: 797979563}
   m_Layer: 0
   m_Name: QuestManager
   m_TagString: Untagged
@@ -49409,6 +49414,8 @@ MonoBehaviour:
   QuestCornerPopUp: {fileID: 1672239573}
   QuestCornerTitle: {fileID: 1988319436}
   QuestCornerDescription: {fileID: 565073728}
+  QuestCompletedSound: {fileID: 8300000, guid: e9387d621c3c0e346bed0f5b9e7ddb7e, type: 3}
+  QuestAcceptedSound: {fileID: 8300000, guid: 33c28482935efa84ba41b404978c6403, type: 3}
   showMainMenu: 1
 --- !u!4 &797979562
 Transform:
@@ -49425,6 +49432,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &797979563
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797979560}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 7054346853882745554, guid: 50010f231237fbe4c8053448c8f9a7ae, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &799545252
 GameObject:
   m_ObjectHideFlags: 0
@@ -58278,7 +58382,7 @@ RectTransform:
   m_GameObject: {fileID: 972895879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.4503, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1769983810}
@@ -58286,7 +58390,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972895881
 MonoBehaviour:
@@ -58301,14 +58405,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eee4946dca2420443bf00c722187dcff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -64070,6 +64174,7 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 0}
   canDisplayDialogue: 1
+  WaitForSeconds: 1.5
   dialogueEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -66683,6 +66788,7 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 0}
   canDisplayDialogue: 1
+  WaitForSeconds: 1.5
   dialogueEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -83287,14 +83393,14 @@ MonoBehaviour:
   m_text: Null
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad82e183cda698d4ebb920b5d1af1e6f, type: 2}
-  m_sharedMaterial: {fileID: 35420828559069579, guid: 079d37a6868c3dd42aeb7296b45cac92, type: 2}
+  m_sharedMaterial: {fileID: -7048974425416074924, guid: ad82e183cda698d4ebb920b5d1af1e6f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -83311,8 +83417,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -83349,10 +83455,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -268.60883, y: -17.821579, z: -267.43042, w: -18.853119}
+  m_margin: {x: -268.60883, y: -6.7416286, z: -267.43042, w: -8.327152}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1341582651
@@ -113488,8 +113594,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1341582649}
   - {fileID: 972895880}
+  - {fileID: 1341582649}
   m_Father: {fileID: 969646943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770893771
@@ -126917,6 +127023,7 @@ MonoBehaviour:
   popUpRight: {fileID: 90077798}
   gameManager: {fileID: 333441392}
   canDisplayDialogue: 1
+  WaitForSeconds: 1.5
   dialogueEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -138308,6 +138415,10 @@ PrefabInstance:
       propertyPath: dialoguePopUp
       value: 
       objectReference: {fileID: 969646942}
+    - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
+      propertyPath: WaitForSeconds
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 75649925001080719, guid: 0cb5eec73b54fb444a5e3a554063e0a7, type: 3}
       propertyPath: interactPrompt
       value: 
