@@ -13,6 +13,7 @@ public class MemberFollowAI : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private const string IS_WALKING_PARAM = "IsWalking";
+    private const string IS_BACKWARDS_PARAM = "IsBackwards";
 
     [Header("Footsteps")]
     public AudioClip[] FootstepsClips;
@@ -62,6 +63,14 @@ public class MemberFollowAI : MonoBehaviour
             else
             {
                 spriteRenderer.flipX = false;
+            }
+            if (followTarget.position.z - transform.position.z <= 0)
+            {
+                anim.SetBool(IS_BACKWARDS_PARAM, false);
+            }
+            else if (followTarget.position.z - transform.position.z > 0)
+            {
+                anim.SetBool(IS_BACKWARDS_PARAM, true);
             }
         }
         else
