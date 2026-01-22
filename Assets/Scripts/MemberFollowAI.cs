@@ -38,6 +38,7 @@ public class MemberFollowAI : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, followTarget.position) > followDist)
         {
+            anim.SetBool(IS_WALKING_PARAM, true);
             isWalking = true;
             // multiply speed by 3 if distance from player to follower > then sprintDistance
             if (Vector3.Distance(transform.position, followTarget.position) > sprintDist)
@@ -52,7 +53,6 @@ public class MemberFollowAI : MonoBehaviour
                 isSprinting = false;
             }
             // walk to player
-            anim.SetBool(IS_WALKING_PARAM, true);
             float step = speed * sprintMutliplier * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, followTarget.position, step);
 
