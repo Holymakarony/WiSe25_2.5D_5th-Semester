@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -7,10 +8,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button CreditsButton;
     [SerializeField] private Button QuitButton;
 
+    [SerializeField] public AudioMixer mixer;
+
     [SerializeField] private GameObject SunBeamAnimation;
-
     [SerializeField] private GameObject CreditsMenuUI;
-
     [SerializeField] private GameObject playerController;
     [SerializeField] private GameObject questManager; 
 
@@ -27,7 +28,8 @@ public class MainMenu : MonoBehaviour
         {
             OnStartClicked();
         }
-        
+
+        ApplyVolume(PlayerPrefs.GetFloat("Master", 0f), PlayerPrefs.GetFloat("SFX", 0f), PlayerPrefs.GetFloat("Music", 0f));
     }
 
     void Update()
@@ -46,6 +48,13 @@ public class MainMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         CreditsMenuUI.SetActive(true);
+    }
+
+    void ApplyVolume(float master, float sfx, float music)
+    {
+        mixer.SetFloat("MasterVolume", master);
+        mixer.SetFloat("SFXVolume", sfx);
+        mixer.SetFloat("MusicVolume", music);
     }
 
     private void OnQuitClicked()
