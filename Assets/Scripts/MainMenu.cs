@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour
 
         StartButton.onClick.AddListener(OnStartClicked);
         CreditsButton.onClick.AddListener(OnCreditsClicked);
+        QuitButton.onClick.AddListener(OnQuitClicked);
 
         if(questManager.GetComponent<QuestManager>().showMainMenu == false)
         {
