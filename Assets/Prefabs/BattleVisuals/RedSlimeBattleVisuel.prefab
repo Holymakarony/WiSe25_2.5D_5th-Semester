@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1847989836, guid: 78af1d0f67ea3e740ba76b651596d4d3, type: 3}
+  m_Sprite: {fileID: 668100540, guid: 0119678b52deacf4ab627ea2fde865c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 1075083388132558949}
   - component: {fileID: 3466734576638750531}
   m_Layer: 0
-  m_Name: SlimeBattleVisual
+  m_Name: RedSlimeBattleVisuel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,7 +272,7 @@ Animator:
   m_GameObject: {fileID: 6670998988196542266}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 567d423289f57fe4d846548ef9aff394, type: 2}
+  m_Controller: {fileID: 9100000, guid: f490e32dc5dc95f49b4d1f9468405ad1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

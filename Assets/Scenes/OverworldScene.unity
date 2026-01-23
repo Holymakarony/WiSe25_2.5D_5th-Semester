@@ -86002,6 +86002,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemeyManager
   allEnemies:
   - {fileID: 11400000, guid: 1627aac0740571a4ca7d44a8049d94a7, type: 2}
+  - {fileID: 11400000, guid: 24ecb4acbc24730419f250017cd082d9, type: 2}
+  - {fileID: 11400000, guid: 367ed3eeea8e9a745aeeeb7b95a3ad73, type: 2}
   currentEnemies: []
 --- !u!4 &1259326127
 Transform:
@@ -90515,6 +90517,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EncounterSystem
   enemiesInScene:
   - Enemy: {fileID: 11400000, guid: 1627aac0740571a4ca7d44a8049d94a7, type: 2}
+    LevelMin: 1
+    LevelMax: 3
+  - Enemy: {fileID: 11400000, guid: 24ecb4acbc24730419f250017cd082d9, type: 2}
+    LevelMin: 1
+    LevelMax: 3
+  - Enemy: {fileID: 11400000, guid: 367ed3eeea8e9a745aeeeb7b95a3ad73, type: 2}
     LevelMin: 1
     LevelMax: 3
   maxNumEnemies: 3
@@ -122253,7 +122261,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ForcedEnemyEncounter
   enemyEncounter:
+  - Enemy: {fileID: 11400000, guid: 367ed3eeea8e9a745aeeeb7b95a3ad73, type: 2}
+    LevelMin: 1
+    LevelMax: 2
   - Enemy: {fileID: 11400000, guid: 1627aac0740571a4ca7d44a8049d94a7, type: 2}
+    LevelMin: 1
+    LevelMax: 2
+  - Enemy: {fileID: 11400000, guid: 24ecb4acbc24730419f250017cd082d9, type: 2}
     LevelMin: 1
     LevelMax: 2
   maxAmountEnemies: 1

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d34ef627ef06866429aafa1f90835e1e, type: 3}
-  m_Name: Slime
+  m_Name: Slime_Blue
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInfo
-  EnemyName: Slime
+  EnemyName: Blauer Schleim
   BaseHealth: 1
   BaseStr: 1
   BaseInitiative: 10
