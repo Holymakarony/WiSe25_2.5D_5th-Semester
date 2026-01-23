@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class DialoguePlayer : MonoBehaviour
 {
     [SerializeField] public string NPCName;
+    [SerializeField] private TypeWriterEffect typeWriter;
     [SerializeField] private GameObject dialoguePopUp;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI speakerLeft;
@@ -47,39 +48,59 @@ public class DialoguePlayer : MonoBehaviour
             dialogueIndex = 0;
             DisplayDialogue();
         }
-        else if (dialogueIsPlaying = true && dialogueIndex < dialogueTexts.Count -1)
+        else if (dialogueIsPlaying = true)
         {
-            dialogueIndex ++;
-            DisplayDialogue();
-            //if (dialogueTexts[dialogueIndex].quest)
-            //{
-            //    FindFirstObjectByType<QuestManager>().AddNewQuest(dialogueTexts[dialogueIndex].quest);
-            //}
+            if (typeWriter.IsTyping)
+            {
+                typeWriter.Skip();
+                return;
+            }
+            if (dialogueIndex < dialogueTexts.Count - 1)
+            {
+                dialogueIndex++;
+                DisplayDialogue();
+            }
+            else
+            {
+                EndDialoge();
+            }
         }
-        else if (dialogueIsPlaying = true && dialogueIndex >= dialogueTexts.Count -1)
+    }
+    private void EndDialoge()
+    { 
+        dialoguePopUp.SetActive(false);
+        dialogueIsPlaying = false; 
+
+        GameObject.FindGameObjectWithTag("Player")
+            .GetComponent<CS_PlayerController>()
+            .SetCanMove(true);
+
+        if (dialogueTexts[dialogueIndex].quest)
         {
-            dialoguePopUp.SetActive(false);
-            dialogueIsPlaying = false;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<CS_PlayerController>().SetCanMove(true);
-            
-            if (dialogueTexts[dialogueIndex].quest)
-            {
-                FindFirstObjectByType<QuestManager>().AddNewQuest(dialogueTexts[dialogueIndex].quest, WaitForSeconds);
-            }
-            FindFirstObjectByType<QuestManager>().CheckQuestStatus(NPCName);
-            canDisplayDialogue = false;
-            if (interactPrompt)
-            {
-                interactPrompt.SetActive(false);
-            }
-            dialogueEvent.Invoke();
-            gameManager.GetComponent<GameManager>().DialogueCompleted(gameObject.name);
+            FindFirstObjectByType<QuestManager>()
+                .AddNewQuest(dialogueTexts[dialogueIndex].quest, WaitForSeconds);
         }
+
+        FindFirstObjectByType<QuestManager>()
+            .CheckQuestStatus(NPCName);
+
+        canDisplayDialogue = false;
+
+        if (interactPrompt)
+            interactPrompt.SetActive(false);
+
+        dialogueEvent.Invoke();
+
+        gameManager.GetComponent<GameManager>()
+            .DialogueCompleted(gameObject.name);
     }
 
     public void DisplayDialogue()
     {
         dialoguePopUp.SetActive(true);
+
+        typeWriter.Play(dialogueTexts[dialogueIndex].Text);
+
             dialogueText.SetText(dialogueTexts[dialogueIndex].Text);
             if (dialogueTexts[dialogueIndex].DisplayLeft == true)
             {
@@ -108,3 +129,4 @@ public class DialoguePlayer : MonoBehaviour
         }
     }
 }
+
