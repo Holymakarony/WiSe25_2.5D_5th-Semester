@@ -20,7 +20,7 @@ public class CharacterManager : MonoBehaviour
     private PlayerControls playerControls;
     private List<GameObject> overWorldCharacters = new List<GameObject>();
 
-    private const string PARTY_JOINED_MESSAGE = " joined the Party!";
+    private const string PARTY_JOINED_MESSAGE = " kaempft jetzt mit dir!";
     private const string NPC_JOINABLE_TAG = "NPCJoinable";
     private const string NPC_DIALOGUE = "NPCDialogue";
 

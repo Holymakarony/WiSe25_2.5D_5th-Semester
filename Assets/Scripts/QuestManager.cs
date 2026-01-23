@@ -23,8 +23,8 @@ public class QuestManager : MonoBehaviour
 
     public bool showMainMenu = true;
 
-    private const string ACTIVATED_MESSAGE = " activated";
-    private const string COMPLETED_MESSAGE = " completed"; 
+    private const string ACTIVATED_MESSAGE = " angenommen";
+    private const string COMPLETED_MESSAGE = " beendet"; 
 
     private static GameObject instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

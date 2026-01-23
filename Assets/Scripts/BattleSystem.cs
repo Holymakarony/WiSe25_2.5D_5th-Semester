@@ -31,11 +31,11 @@ public class BattleSystem : MonoBehaviour
     private EnemeyManager enemyManager;
     private int currentPlayer;
 
-    private const string ACTION_MESSAGE = "'s Action:";
-    private const string WIN_MESSAGE = "Your party won the battle!";
-    private const string LOSE_MESSAGE = "Your party has been defeated!";
-    private const string RUN_MESSAGE_SUCCES = "You ran away!";
-    private const string RUN_MESSAGE_FAIL = "You cant run right now...";
+    private const string ACTION_MESSAGE = "'s Aktion:";
+    private const string WIN_MESSAGE = "Dein Team hat den Kampf gewonnen!";
+    private const string LOSE_MESSAGE = "Dein Team wurde besiegt!";
+    private const string RUN_MESSAGE_SUCCES = "Du bist davongelaufen!";
+    private const string RUN_MESSAGE_FAIL = "Du kannst jetzt nicht wegrennen...";
     private const int TURN_DURATION = 2;
     private const int RUN_CHANCE = 50;
     private const string OVERWORLD_SCENE = "OverworldScene";
@@ -124,7 +124,7 @@ public class BattleSystem : MonoBehaviour
             // kill enemy
             if (currTarget.CurrHealth <= 0)
             {
-                bottomText.text = string.Format("{0} defeated {1}.", currAttacker.Name, currTarget.Name);
+                bottomText.text = string.Format("{0} hat {1} besiegt.", currAttacker.Name, currTarget.Name);
                 yield return new WaitForSeconds(TURN_DURATION); // wait
                 enemyBattlers.Remove(currTarget);
                 FindFirstObjectByType<QuestManager>().CheckQuestStatus(currTarget.Name);
@@ -151,7 +151,7 @@ public class BattleSystem : MonoBehaviour
             // kill party member
             if(currTarget.CurrHealth <= 0)
             {
-                bottomText.text = string.Format("{0} defeated {1}.", currAttacker.Name, currTarget.Name);
+                bottomText.text = string.Format("{0} hat {1} besiegt.", currAttacker.Name, currTarget.Name);
                 yield return new WaitForSeconds(TURN_DURATION); // wait
                 playerBattlers.Remove(currTarget);
 
@@ -202,7 +202,7 @@ public class BattleSystem : MonoBehaviour
             }
             SaveHealth();
             allBattlers[i].UpdateUI();
-            bottomText.text = string.Format("{0} has healed 10 health points.", allBattlers[i].Name);
+            bottomText.text = string.Format("{0} hat sich um 10 Lebenspukte geheilt.", allBattlers[i].Name);
             yield return new WaitForSeconds(TURN_DURATION);
 
         }
@@ -213,7 +213,7 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.Battle)
         {
             allBattlers[i].IsBlocking = true;
-            bottomText.text = string.Format("{0} is blocking.", allBattlers[i].Name);
+            bottomText.text = string.Format("{0} blockt den nächsten Angriff.", allBattlers[i].Name);
             yield return new WaitForSeconds(TURN_DURATION);
         }
     }
@@ -236,7 +236,7 @@ public class BattleSystem : MonoBehaviour
             // kill enemy
             if (currTarget.CurrHealth <= 0)
             {
-                bottomText.text = string.Format("{0} defeated {1}.", currAttacker.Name, currTarget.Name);
+                bottomText.text = string.Format("{0} hat {1} besiegt.", currAttacker.Name, currTarget.Name);
                 yield return new WaitForSeconds(TURN_DURATION); // wait
                 enemyBattlers.Remove(currTarget);
                 FindFirstObjectByType<QuestManager>().CheckQuestStatus(currTarget.Name);
@@ -417,14 +417,14 @@ public class BattleSystem : MonoBehaviour
             currTarget.CurrHealth -= damage; // deal damage
             currTarget.BattleVisuals.PlayHitAnimation();// target play hit animation
             currTarget.UpdateUI(); // update UI
-            bottomText.text = string.Format("{0} attacks {1} for {2} damage", currAttacker.Name, currTarget.Name, damage);
+            bottomText.text = string.Format("{0} greift {1} an und verursacht {2} Schaden.", currAttacker.Name, currTarget.Name, damage);
             SaveHealth();
         }
         else if (currTarget.IsBlocking == true)
         {
             currAttacker.BattleVisuals.PlayAttackAnimation(); // play attack animation
             // currTarget.BattleVisuals.PlayBlockAnimation(); // play block animation if attacked
-            bottomText.text = string.Format("{0} blocked the attack from {1}", currTarget.Name, currAttacker.Name);
+            bottomText.text = string.Format("{0} hat den Angriff von {1} abgewehrt.", currTarget.Name, currAttacker.Name);
         }
     }
 
@@ -438,13 +438,13 @@ public class BattleSystem : MonoBehaviour
             currTarget.CurrHealth -= damage; // deal damage
             currTarget.BattleVisuals.PlayHitAnimation();// target play hit animation
             currTarget.UpdateUI(); // update UI
-            bottomText.text = string.Format("{0} attacks {1} for {2} damage", currAttacker.Name, currTarget.Name, damage);
+            bottomText.text = string.Format("{0} greift {1} an und verursacht {2} Schaden.", currAttacker.Name, currTarget.Name, damage);
             SaveHealth();
         }
         else if (hitChance > 7)
         {
             currTarget.BattleVisuals.PlayHitAnimation();// target play hit animation
-            bottomText.text = string.Format("{0} missed {1}", currAttacker.Name, currTarget.Name);
+            bottomText.text = string.Format("{0} hat {1} verfehlt...", currAttacker.Name, currTarget.Name);
         }
     }
 
