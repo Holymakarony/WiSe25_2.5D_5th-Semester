@@ -18022,10 +18022,10 @@ MonoBehaviour:
   dialogueEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2050348942}
-        m_TargetAssemblyTypeName: DeactivateSelfScript, Assembly-CSharp
-        m_MethodName: DeactivateSelf
-        m_Mode: 1
+      - m_Target: {fileID: 905224317}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -58495,6 +58495,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
+--- !u!1 &905224317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8955205465866244930, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
+  m_PrefabInstance: {fileID: 905224316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &906859343
 PrefabInstance:
   m_ObjectHideFlags: 0
