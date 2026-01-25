@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34ef627ef06866429aafa1f90835e1e, type: 3}
   m_Name: Ruprecht
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInfo
-  EnemyName: 
-  BaseHealth: 0
-  BaseStr: 0
-  BaseInitiative: 0
-  EnemyVisualBattlePrefab: {fileID: 0}
+  EnemyName: Ruprecht
+  BaseHealth: 20
+  BaseStr: 5
+  BaseInitiative: 5
+  EnemyVisualBattlePrefab: {fileID: 6670998988196542266, guid: afbc29ff3b41d9a47aad38acc7d68ee5, type: 3}

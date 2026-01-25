@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34ef627ef06866429aafa1f90835e1e, type: 3}
   m_Name: Goblin_Yellow
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInfo
-  EnemyName: 
-  BaseHealth: 0
-  BaseStr: 0
-  BaseInitiative: 0
-  EnemyVisualBattlePrefab: {fileID: 0}
+  EnemyName: Michel
+  BaseHealth: 10
+  BaseStr: 5
+  BaseInitiative: 5
+  EnemyVisualBattlePrefab: {fileID: 6670998988196542266, guid: 1cf243289a1678e4f93ddfeb82b570a5, type: 3}
