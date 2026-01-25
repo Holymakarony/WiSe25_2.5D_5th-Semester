@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 3401421357264866105}
   - component: {fileID: 3466734576638750531}
   - component: {fileID: 5514603255526019136}
+  - component: {fileID: 8706583076898449429}
   m_Layer: 0
   m_Name: RedGnomeBattleVisual
   m_TagString: Untagged
@@ -276,6 +277,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleVisuals
   healthbar: {fileID: 1644416848516784733}
   levelText: {fileID: 284046329834602237}
+  Arrow: {fileID: 8300000, guid: 8eeb0c3a4d5b3024eb827ec40ee5c4d9, type: 3}
+  FemaleDeath: {fileID: 8300000, guid: 7cd96551bdc0f5a41b59dc2b6af41bac, type: 3}
+  FemalePain: {fileID: 8300000, guid: b4f2d5638ccc6c74e8c4ca0cca9bd997, type: 3}
+  GnomeDeath1: {fileID: 8300000, guid: d44ae69ca652e5d44be685c0be6d7e45, type: 3}
+  GnomeDeath2: {fileID: 8300000, guid: 0dc0aa7dcf5554b4d93908e35bf85508, type: 3}
+  GnomeDeath3: {fileID: 8300000, guid: 856f9971a53fa704e94e27cf779c10ff, type: 3}
+  MagicFire1: {fileID: 8300000, guid: 6f2fb936ac6942c4baebbfac790a2f68, type: 3}
+  MagicFire2: {fileID: 8300000, guid: c95fee5935369944fbfbd10c4624a8b0, type: 3}
+  MagicFire3: {fileID: 8300000, guid: ca8967f27bef90543849d1360fed39b7, type: 3}
+  MaleDeath1: {fileID: 8300000, guid: b531aa58e27b26742895df04e266a95d, type: 3}
+  MaleDeath2: {fileID: 8300000, guid: cd08de9e0c311d44d8e9526fce35f535, type: 3}
+  MalePain: {fileID: 8300000, guid: c524ef088f4413e41ae9a5c9a69b6ee8, type: 3}
+  ShieldBlock: {fileID: 8300000, guid: 9b21ab3e5789e7748b159c68ad7cd0b9, type: 3}
+  SlimeAttack: {fileID: 8300000, guid: 3aba2c9b417824940be0258a704dd432, type: 3}
+  SlimeHit: {fileID: 8300000, guid: 111036bbf149c9946a1ca4301cae670c, type: 3}
+  SwordHit: {fileID: 8300000, guid: 4ceae0447866f8e499a84b3d02f3851a, type: 3}
+  Heal: {fileID: 8300000, guid: 948df988fb7a38e4ab2d7560b7f49019, type: 3}
+  _audioSource: {fileID: 8706583076898449429}
 --- !u!95 &5514603255526019136
 Animator:
   serializedVersion: 7
@@ -298,6 +317,103 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &8706583076898449429
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670998988196542266}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 7054346853882745554, guid: 50010f231237fbe4c8053448c8f9a7ae, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7083528870381736261
 GameObject:
   m_ObjectHideFlags: 0

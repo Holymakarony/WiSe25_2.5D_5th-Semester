@@ -25,6 +25,26 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI actionText;
     [SerializeField] private GameObject bottomTextPopUp;
     [SerializeField] private TextMeshProUGUI bottomText;
+    [Header("Battle Sounds")]
+    public AudioClip Arrow;
+    public AudioClip FemaleDeath;
+    public AudioClip FemalePain;
+    public AudioClip GnomeDeath1;
+    public AudioClip GnomeDeath2;
+    public AudioClip GnomeDeath3;
+    public AudioClip MagicFire1;
+    public AudioClip MagicFire2;
+    public AudioClip MagicFire3;
+    public AudioClip MaleDeath1;
+    public AudioClip MaleDeath2;
+    public AudioClip MalePain;
+    public AudioClip ShieldBlock;
+    public AudioClip SlimeAttack;
+    public AudioClip SlimeHit;
+    public AudioClip SwordHit;
+
+    private AudioSource _audioSource;
+
 
 
     private PartyManager partyManager;
@@ -650,4 +670,5 @@ public class BattleEntities
     {
         BattleVisuals.ChangeHealth(CurrHealth);
     }
+
 }

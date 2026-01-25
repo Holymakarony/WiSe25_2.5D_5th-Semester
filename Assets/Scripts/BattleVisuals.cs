@@ -25,6 +25,27 @@ public class BattleVisuals : MonoBehaviour
     private const string IS_BLOCK_PARAM = "IsBlock";
     private const string IS_RUN_PARAM = "IsRun";
 
+    [Header("Battle Sounds")]
+    public AudioClip Arrow;
+    public AudioClip FemaleDeath;
+    public AudioClip FemalePain;
+    public AudioClip GnomeDeath1;
+    public AudioClip GnomeDeath2;
+    public AudioClip GnomeDeath3;
+    public AudioClip MagicFire1;
+    public AudioClip MagicFire2;
+    public AudioClip MagicFire3;
+    public AudioClip MaleDeath1;
+    public AudioClip MaleDeath2;
+    public AudioClip MalePain;
+    public AudioClip ShieldBlock;
+    public AudioClip SlimeAttack;
+    public AudioClip SlimeHit;
+    public AudioClip SwordHit;
+    public AudioClip Heal;
+
+    [SerializeField] private AudioSource _audioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -94,5 +115,74 @@ public class BattleVisuals : MonoBehaviour
     public void PlayRunAnimation()
     {
         anim.SetTrigger(IS_RUN_PARAM);
+    }
+
+    public void PlayArrow()
+    {
+        _audioSource.PlayOneShot(Arrow);
+    }
+    public void PlayFemaleDeath()
+    {
+        _audioSource.PlayOneShot(FemaleDeath);
+    }
+    public void PlayFemalePain()
+    {
+        _audioSource.PlayOneShot(FemalePain);
+    }
+    public void PlayGnomeDeath1()
+    {
+        _audioSource.PlayOneShot(GnomeDeath1);
+    }
+    public void PlayGnomeDeath2()
+    {
+        _audioSource.PlayOneShot(GnomeDeath2);
+    }
+    public void PlayGnomeDeath3()
+    {
+        _audioSource.PlayOneShot(GnomeDeath3);
+    }
+    public void PlayMagicFire1()
+    {
+        _audioSource.PlayOneShot(MagicFire1);
+    }
+    public void PlayMagicFire2()
+    {
+        _audioSource.PlayOneShot(MagicFire2);
+    }
+    public void PlayMagicFire3()
+    {
+        _audioSource.PlayOneShot(MagicFire3);
+    }
+    public void PlayMaleDeath1()
+    {
+        _audioSource.PlayOneShot(MaleDeath1);
+    }
+    public void PlayMaleDeath2()
+    {
+        _audioSource.PlayOneShot(MaleDeath2);
+    }
+    public void PlayMalePain()
+    {
+        _audioSource.PlayOneShot(MalePain);
+    }
+    public void PlayShieldBlock()
+    {
+        _audioSource.PlayOneShot(ShieldBlock);
+    }
+    public void PlaySlimeAttack()
+    {
+        _audioSource.PlayOneShot(SlimeAttack);
+    }
+    public void PlaySlimeHit()
+    {
+        _audioSource.PlayOneShot(SlimeHit);
+    }
+    public void PlaySwordHit()
+    {
+        _audioSource.PlayOneShot(SwordHit);
+    }
+    public void PlayHeal()
+    {
+        _audioSource.PlayOneShot(Heal);
     }
 }
