@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quest
   Title: "Konfrontiere den merkw\xFCrdigen Mann"
   QuestType: 1
-  Desc: "Konfrontiere den merkw\xFCrdigen Typen in Strumpfhosen"
-  Target: Slime
+  Desc: "Konfrontiere den merkw\xFCrdigen blauen Typen in Strumpfhosen"
+  Target: Kunz
   currentAmount: 0
   targetAmount: 1

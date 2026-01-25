@@ -30,6 +30,7 @@ public class BattleSystem : MonoBehaviour
     private PartyManager partyManager;
     private EnemeyManager enemyManager;
     private int currentPlayer;
+    private bool someoneHasPriority = false;
 
     private const string ACTION_MESSAGE = "'s Aktion:";
     private const string WIN_MESSAGE = "Dein Team hat den Kampf gewonnen!";
@@ -54,6 +55,7 @@ public class BattleSystem : MonoBehaviour
     
     private IEnumerator BattleRoutine()
     {
+        someoneHasPriority = false;
         enemySelectionMenu.SetActive(false); // enemy selection menu disabled
         enemySpecialSelectionMenu.SetActive(false); // enemy special selection menu disabled
         state = BattleState.Battle; // change our state to the battle state
@@ -67,18 +69,22 @@ public class BattleSystem : MonoBehaviour
                 switch (allBattlers[i].BattleAction)
                 {
                     case BattleEntities.Action.Attack:
+                        if(someoneHasPriority && allBattlers[i].IsPlayer){allBattlers[i].ReSetTarget(allBattlers[i].Target);}
                         yield return StartCoroutine(AttackRoutine(i));
                         break;
                     case BattleEntities.Action.Run:
                         yield return StartCoroutine(RunRoutine());
                         break;
                     case BattleEntities.Action.Heal:
+                        someoneHasPriority = true;
                         yield return StartCoroutine(HealRoutine(i));
                         break;
                     case BattleEntities.Action.SpecialAttack:
+                        if(someoneHasPriority && allBattlers[i].IsPlayer){allBattlers[i].ReSetTarget(allBattlers[i].Target);}
                         yield return StartCoroutine(SpecialAttackRoutine(i));
                         break;
                     case BattleEntities.Action.Block:
+                        someoneHasPriority = true;
                         yield return StartCoroutine(BlockRoutine(i));
                         break;
                     default:
@@ -94,6 +100,7 @@ public class BattleSystem : MonoBehaviour
         {
             bottomTextPopUp.SetActive(false);
             currentPlayer = 0;
+            DetermineBattleOrder();
             ShowBattleMenu();
 
             for (int i = 0; i < allBattlers.Count; i++)
@@ -220,6 +227,7 @@ public class BattleSystem : MonoBehaviour
             {
                 allBattlers[i].CurrHealth = allBattlers[i].MaxHealth;
             }
+            allBattlers[i].BattleVisuals.PlayHealAnimation(); // play attack animation
             SaveHealth();
             allBattlers[i].UpdateUI();
             bottomText.text = string.Format("{0} hat sich um 10 Lebenspukte geheilt.", allBattlers[i].Name);
@@ -233,6 +241,7 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.Battle)
         {
             allBattlers[i].IsBlocking = true;
+            allBattlers[i].BattleVisuals.PlayBlockAnimation();
             bottomText.text = string.Format("{0} blockt den nächsten Angriff.", allBattlers[i].Name);
             yield return new WaitForSeconds(TURN_DURATION);
         }
@@ -343,7 +352,7 @@ public class BattleSystem : MonoBehaviour
     public void ShowEnemySelectionMenu()
     {
         // disable the battle menu + set enemy selection buttons + enable selection menu
-        DetermineBattleOrder();
+        //DetermineBattleOrder();
         battleMenu.SetActive(false);
         SetEnemySelectionButtons();
         enemySelectionMenu.SetActive(true);
@@ -390,7 +399,7 @@ public class BattleSystem : MonoBehaviour
     public void ShowEnemySpecialSelectionMenu()
     {
         // disable the battle menu + set special enemy selection buttons + enable special selection menu
-        DetermineBattleOrder();
+        //DetermineBattleOrder();
         battleMenu.SetActive(false);
         SetEnemySpecialSelectionButtons();
         enemySpecialSelectionMenu.SetActive(true);
@@ -457,7 +466,7 @@ public class BattleSystem : MonoBehaviour
     private void SpecialAttackAction(BattleEntities currAttacker, BattleEntities currTarget)
     {
         int damage = currAttacker.Strenght + 3; // maybe spaeter noch changen, balancing wise, idk
-        currAttacker.BattleVisuals.PlayAttackAnimation(); // play attack animation
+        currAttacker.BattleVisuals.PlaySpecialAttackAnimation(); // play attack animation
         int hitChance = Random.Range(0, 10);
         if(hitChance <= 7)
         {
@@ -578,7 +587,6 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.Selection;
         // set current members target
         BattleEntities currentPlayerEntity = playerBattlers[currentPlayer];
-        // tell battle system member wants to run
         currentPlayerEntity.BattleAction = BattleEntities.Action.Block;
         currentPlayerEntity.GetsPriority = true;
         currentPlayerEntity.Initiative *= 20;
@@ -631,6 +639,11 @@ public class BattleEntities
     public void SetTarget(int target)
     {
         Target = target;
+    }
+
+    public void ReSetTarget(int target)
+    {
+        Target = target + 1;
     }
 
     public void UpdateUI()

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Quest 1
   m_EditorClassIdentifier: Assembly-CSharp::Quest
   Title: Finde Hansel
-  QuestType: 0
+  QuestType: 2
   Desc: "Such Hansel auf dem \xDCbungsplatz im Norden und trainiere an einer Strohpuppe"
-  Target: JoinableCharacter
+  Target: Hansel
   currentAmount: 0
   targetAmount: 1

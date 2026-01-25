@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f847d14b8298f4b89cc8461b3cd2d1, type: 3}
   m_Name: Quest 1
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  Title: Geh in den Wald
-  QuestType: 0
-  Desc: "Geh in den Wald im S\xFCden der Stadt"
-  Target: QuestTrigger
+  Title: Besiege die Strohpuppe
+  QuestType: 1
+  Desc: "\xDCbe einen Kampf an der Strohpuppe"
+  Target: Strohpuppe
   currentAmount: 0
   targetAmount: 1

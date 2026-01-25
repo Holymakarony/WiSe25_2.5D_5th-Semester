@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Gretel
   DisplayLeft: 1
-  Text: "Natalie meinte wir sollen mal den Wald im S\xFCden untersuchen."
+  Text: Darius meinte wir sollen mal an einer Strohpuppe trainieren
   quest: {fileID: 0}

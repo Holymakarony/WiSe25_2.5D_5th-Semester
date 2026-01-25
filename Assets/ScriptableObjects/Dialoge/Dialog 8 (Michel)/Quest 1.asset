@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f847d14b8298f4b89cc8461b3cd2d1, type: 3}
   m_Name: Quest 1
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  Title: Untersuche die Festung
-  QuestType: 0
-  Desc: "Untersuche die Festung \xF6stlich von hier."
-  Target: QuestTrigger
+  Title: Besiege den letzen Mann.
+  QuestType: 1
+  Desc: Konfrontiere den letzen komischen Strumphosentraeger
+  Target: Kaspar
   currentAmount: 0
   targetAmount: 1

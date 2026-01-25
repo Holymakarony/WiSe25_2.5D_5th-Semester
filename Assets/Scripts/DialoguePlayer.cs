@@ -117,6 +117,12 @@ public class DialoguePlayer : MonoBehaviour
             }
     }
 
+    public void AddNewQuest(Quest quest)
+    {
+        FindFirstObjectByType<QuestManager>()
+                .AddNewQuest(quest, WaitForSeconds);
+    }
+
     public void ShowInteractPrompt(bool showPrompt)
     {
         if (!GameObject.FindFirstObjectByType<GameManager>().GetComponent<GameManager>().CompletedDialoguePlayerNames.Contains(gameObject.name))

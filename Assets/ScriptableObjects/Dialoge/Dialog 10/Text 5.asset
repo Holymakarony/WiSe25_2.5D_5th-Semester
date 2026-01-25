@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a96cf05b727589479e2e5f939c13be9, type: 3}
-  m_Name: Text 1
+  m_Name: Text 5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
-  SpeakerName: Gretel
-  DisplayLeft: 1
-  Text: "Hmm, der sieht so aus als w\xFCrde er was im Schilde f\xFChren..."
-  quest: {fileID: 11400000, guid: b111db8e96c55384c97ab2759b40361b, type: 2}
+  SpeakerName: Ruprecht
+  DisplayLeft: 0
+  Text: "Dann wird das was jetzt kommt umso leichter f\xFCr mich du Goere!"
+  quest: {fileID: 0}

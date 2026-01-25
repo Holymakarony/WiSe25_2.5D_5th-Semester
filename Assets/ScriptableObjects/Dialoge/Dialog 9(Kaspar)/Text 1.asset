@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Gretel
   DisplayLeft: 1
-  Text: Da ist noch einer von der Sorte!
-  quest: {fileID: 11400000, guid: 6720ad594b1b56149a597fdcfc716dcf, type: 2}
+  Text: Das muss der letzte sein...
+  quest: {fileID: 0}

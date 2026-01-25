@@ -20,6 +20,10 @@ public class BattleVisuals : MonoBehaviour
     private const string IS_ATTACK_PARAM = "IsAttack";
     private const string IS_HIT_PARAM = "IsHit";
     private const string IS_DEAD_PARAM = "IsDead";
+    private const string IS_SPECIALATTACK_PARAM = "IsSpecialAttack";
+    private const string IS_HEAL_PARAM = "IsHeal";
+    private const string IS_BLOCK_PARAM = "IsBlock";
+    private const string IS_RUN_PARAM = "IsRun";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -70,5 +74,25 @@ public class BattleVisuals : MonoBehaviour
     public void PlayDeathAnimation()
     {
         anim.SetTrigger(IS_DEAD_PARAM);
+    }
+
+    public void PlaySpecialAttackAnimation()
+    {
+        anim.SetTrigger(IS_SPECIALATTACK_PARAM);
+    }
+
+    public void PlayHealAnimation()
+    {
+        anim.SetTrigger(IS_HEAL_PARAM);
+    }
+
+    public void PlayBlockAnimation()
+    {
+        anim.SetTrigger(IS_BLOCK_PARAM);
+    }
+
+    public void PlayRunAnimation()
+    {
+        anim.SetTrigger(IS_RUN_PARAM);
     }
 }

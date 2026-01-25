@@ -100,10 +100,10 @@ TextureImporter:
       name: Dummy_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 32
-        width: 11
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,10 +122,10 @@ TextureImporter:
       name: Dummy_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 16
         y: 32
-        width: 11
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: Dummy_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 32
-        width: 11
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Dummy_3
       rect:
         serializedVersion: 2
-        x: 50
+        x: 48
         y: 32
-        width: 11
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +188,10 @@ TextureImporter:
       name: Dummy_4
       rect:
         serializedVersion: 2
-        x: 83
+        x: 80
         y: 32
-        width: 11
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: Dummy_5
       rect:
         serializedVersion: 2
-        x: 99
+        x: 96
         y: 32
-        width: 11
-        height: 14
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: Dummy_6
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 11
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: Dummy_7
       rect:
         serializedVersion: 2
-        x: 19
+        x: 16
         y: 0
-        width: 11
-        height: 14
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,10 +276,10 @@ TextureImporter:
       name: Dummy_8
       rect:
         serializedVersion: 2
-        x: 36
-        y: 5
-        width: 11
-        height: 16
+        x: 32
+        y: 0
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,10 +298,10 @@ TextureImporter:
       name: Dummy_9
       rect:
         serializedVersion: 2
-        x: 51
+        x: 48
         y: 0
-        width: 11
-        height: 15
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,10 +320,10 @@ TextureImporter:
       name: Dummy_10
       rect:
         serializedVersion: 2
-        x: 66
+        x: 64
         y: 0
-        width: 11
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,10 +342,10 @@ TextureImporter:
       name: Dummy_11
       rect:
         serializedVersion: 2
-        x: 99
+        x: 96
         y: 0
-        width: 11
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,10 +364,10 @@ TextureImporter:
       name: Dummy_12
       rect:
         serializedVersion: 2
-        x: 115
+        x: 112
         y: 0
-        width: 11
-        height: 14
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,7 +389,7 @@ TextureImporter:
         x: 128
         y: 0
         width: 16
-        height: 8
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,7 +418,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":2.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Dummy_0: 2142823687
       Dummy_1: 1474264582
