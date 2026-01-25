@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PartyMemberInfo
   MemberName: Hans
   StartingLevel: 1
-  BaseHealth: 20
+  BaseHealth: 30
   BaseStr: 7
   BaseInitiative: 10
   MemberBattleVisualPrefab: {fileID: 6501855327884264846, guid: 9e69019098616724ca5c8e462cb5b558, type: 3}

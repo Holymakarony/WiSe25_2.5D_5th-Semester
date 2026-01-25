@@ -14737,7 +14737,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1341582650}
   speakerLeft: {fileID: 1141268336}
   speakerRight: {fileID: 1265624384}
-  dialogueTexts: []
+  dialogueTexts:
+  - {fileID: 11400000, guid: 41523815d98d453419be12c32687cba8, type: 2}
   interactPrompt: {fileID: 106009288}
   popUpLeft: {fileID: 965557541}
   speakerPortraitLeft: {fileID: 1406088479}
@@ -22930,7 +22931,7 @@ MonoBehaviour:
   m_text: Spiel verlassen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
-  m_sharedMaterial: {fileID: 384827774709660848, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
+  m_sharedMaterial: {fileID: -9159622422789901583, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -37292,7 +37293,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
-  m_sharedMaterial: {fileID: 384827774709660848, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
+  m_sharedMaterial: {fileID: -9159622422789901583, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -49226,7 +49227,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &739796664
 Transform:
   m_ObjectHideFlags: 0
@@ -61434,6 +61435,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 739796663}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!82 &975538153
 AudioSource:
