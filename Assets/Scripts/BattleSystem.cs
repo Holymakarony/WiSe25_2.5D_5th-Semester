@@ -151,7 +151,6 @@ public class BattleSystem : MonoBehaviour
             // kill enemy
             if (currTarget.CurrHealth <= 0)
             {
-                currTarget.BattleVisuals.PlayDeathAnimation();
                 bottomText.text = string.Format("{0} hat {1} besiegt.", currAttacker.Name, currTarget.Name);
                 yield return new WaitForSeconds(TURN_DURATION); // wait
                 enemyBattlers.Remove(currTarget);
@@ -185,7 +184,6 @@ public class BattleSystem : MonoBehaviour
             // kill party member
             if(currTarget.CurrHealth <= 0)
             {
-                currTarget.BattleVisuals.PlayDeathAnimation();
                 bottomText.text = string.Format("{0} hat {1} besiegt.", currAttacker.Name, currTarget.Name);
                 yield return new WaitForSeconds(TURN_DURATION); // wait
                 playerBattlers.Remove(currTarget);

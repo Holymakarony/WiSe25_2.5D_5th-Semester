@@ -69,7 +69,7 @@ public class BattleVisuals : MonoBehaviour
         if (currHealth <= 0)
         {
             PlayDeathAnimation();
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 3f);
         }
         UpdateHealthBar(); 
     }
