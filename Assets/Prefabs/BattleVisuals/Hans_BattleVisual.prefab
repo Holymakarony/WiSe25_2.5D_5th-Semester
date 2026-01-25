@@ -409,7 +409,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -80049067, guid: 19e46d2d1ef00254281964b3f2de3c1e, type: 3}
+  m_Sprite: {fileID: -1501460412, guid: ad20574bf1606214196ab3c9633daf5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9117196050420575054}
   - component: {fileID: 4577533890170630426}
-  - component: {fileID: 3957729001298904006}
+  - component: {fileID: 8994525777250122805}
   m_Layer: 0
   m_Name: Hans_BattleVisual
   m_TagString: Untagged
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleVisuals
   healthbar: {fileID: 2536151413296333617}
   levelText: {fileID: 6041135957188696636}
---- !u!95 &3957729001298904006
+--- !u!95 &8994525777250122805
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ Animator:
   m_GameObject: {fileID: 6501855327884264846}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 69803e558a3659749b995e3069ba9d73, type: 2}
+  m_Controller: {fileID: 9100000, guid: f78951663ccd87c48847b0bdf59470b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

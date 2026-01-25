@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ForcedEnemyEncounter : MonoBehaviour
 {
@@ -8,11 +9,14 @@ public class ForcedEnemyEncounter : MonoBehaviour
 
     private EnemeyManager enemyManager;
 
+    public UnityEvent defeatedEvent;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (GameObject.FindFirstObjectByType<GameManager>().GetComponent<GameManager>().CompletedForcedEncounters.Contains(gameObject.name))
         {
+            defeatedEvent.Invoke();
             gameObject.SetActive(false);
         }
     }

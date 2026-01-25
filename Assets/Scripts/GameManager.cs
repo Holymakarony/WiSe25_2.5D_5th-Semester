@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] public List<String> CompletedDialoguePlayerNames;
     [SerializeField] public List<String> CompletedForcedEncounters;
+    [SerializeField] public List<String> DeactivatedBarriers;
 
     private static GameObject instance;
 
@@ -46,5 +47,10 @@ public class GameManager : MonoBehaviour
     public void RemoveCompletedDialogue(String DialoguePlayerName)
     {
         CompletedDialoguePlayerNames.Remove(DialoguePlayerName);
+    }
+
+    public void DeactivateBarrier(String Barrier)
+    {
+        DeactivatedBarriers.Add(Barrier);
     }
 }

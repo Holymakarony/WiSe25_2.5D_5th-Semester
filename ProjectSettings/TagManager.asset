@@ -12,6 +12,7 @@ TagManager:
   - House
   - EnterTrigger
   - QuestTrigger
+  - GameManager
   layers:
   - Default
   - TransparentFX

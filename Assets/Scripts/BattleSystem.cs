@@ -267,6 +267,12 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.Won;
                 bottomText.text = WIN_MESSAGE;
                 yield return new WaitForSeconds(TURN_DURATION); // wait
+
+                if (GameObject.FindAnyObjectByType<GameManager>().currentForcedEncounter != null)
+                {
+                    GameObject.FindFirstObjectByType<GameManager>().ForcedEnounterCompleted(GameObject.FindFirstObjectByType<GameManager>().currentForcedEncounter);
+                }
+
                 SceneManager.LoadScene(OVERWORLD_SCENE);
             }
         }
