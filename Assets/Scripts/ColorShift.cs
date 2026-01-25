@@ -94,4 +94,10 @@ public class ColorShift : MonoBehaviour
     {
         _audioSource.PlayOneShot(Thunder);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
