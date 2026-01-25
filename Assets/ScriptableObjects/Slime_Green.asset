@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slime_Green
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInfo
   EnemyName: Gruener Schleim
-  BaseHealth: 1
-  BaseStr: 1
-  BaseInitiative: 10
+  BaseHealth: 10
+  BaseStr: 4
+  BaseInitiative: 3
   EnemyVisualBattlePrefab: {fileID: 6670998988196542266, guid: 52f74a4a2ccc43840904c30b43956c90, type: 3}

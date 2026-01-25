@@ -30,6 +30,7 @@ public class ColorShift : MonoBehaviour
     private Animator anim;
 
     private const string PLAY_START_PARAM = "PlayStart";
+    private const string PLAY_END_PARAM = "PlayEnd";
 
     // start anim
     public float changePerSecond = 1f;
@@ -83,6 +84,11 @@ public class ColorShift : MonoBehaviour
     public void PlayStartAnimation()
     {
         anim.SetTrigger(PLAY_START_PARAM);
+    }
+
+    public void PlayEndAnimation()
+    {
+        anim.SetTrigger(PLAY_END_PARAM);
     }
 
     public void PlayDoor()

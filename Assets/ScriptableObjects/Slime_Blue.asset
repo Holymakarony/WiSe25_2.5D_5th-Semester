@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slime_Blue
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInfo
   EnemyName: Blauer Schleim
-  BaseHealth: 1
-  BaseStr: 1
-  BaseInitiative: 10
+  BaseHealth: 7
+  BaseStr: 3
+  BaseInitiative: 5
   EnemyVisualBattlePrefab: {fileID: 6670998988196542266, guid: decd1a67a50a84844a80be39e7644569, type: 3}

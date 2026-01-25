@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ruprecht
   m_EditorClassIdentifier: Assembly-CSharp::EnemyInfo
   EnemyName: Ruprecht
-  BaseHealth: 20
-  BaseStr: 5
+  BaseHealth: 35
+  BaseStr: 8
   BaseInitiative: 5
   EnemyVisualBattlePrefab: {fileID: 6670998988196542266, guid: afbc29ff3b41d9a47aad38acc7d68ee5, type: 3}
