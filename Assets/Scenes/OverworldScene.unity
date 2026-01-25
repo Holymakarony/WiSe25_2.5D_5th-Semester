@@ -22931,7 +22931,7 @@ MonoBehaviour:
   m_text: Spiel verlassen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
-  m_sharedMaterial: {fileID: -9159622422789901583, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
+  m_sharedMaterial: {fileID: 384827774709660848, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -37293,7 +37293,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
-  m_sharedMaterial: {fileID: -9159622422789901583, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
+  m_sharedMaterial: {fileID: 384827774709660848, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -122161,7 +122161,7 @@ MonoBehaviour:
   gameManager: {fileID: 333441392}
   dialogueIsPlaying: 0
   canDisplayDialogue: 1
-  WaitForSeconds: 0
+  WaitForSeconds: 1.5
   dialogueEvent:
     m_PersistentCalls:
       m_Calls:
