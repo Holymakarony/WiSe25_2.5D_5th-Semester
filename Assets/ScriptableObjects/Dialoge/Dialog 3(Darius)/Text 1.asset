@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Text 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Darius
+  speakerSprite: {fileID: -1854698576, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
   Text: "Hey Gretel, wei\xDFt du zuf\xE4llig was hier los ist?"
   quest: {fileID: 0}

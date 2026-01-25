@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Text 9
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Darius
+  speakerSprite: {fileID: -1854698576, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
   Text: "Passt blo\xDF auf euch auf!"
   quest: {fileID: 11400000, guid: 4abd77e7f6d5fa2449d6d1cd78abe1e0, type: 2}

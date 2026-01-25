@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a96cf05b727589479e2e5f939c13be9, type: 3}
   m_Name: Text 2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
-  SpeakerName: Hansel
+  SpeakerName: Hans
+  speakerSprite: {fileID: 477203961, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
   Text: Was du nicht sagst Schwesterherz...
   quest: {fileID: 0}

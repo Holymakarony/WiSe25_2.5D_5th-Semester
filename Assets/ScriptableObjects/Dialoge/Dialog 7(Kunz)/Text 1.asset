@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Text 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Gretel
+  speakerSprite: {fileID: -1075911777, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 1
   Text: Da ist einer von denen!
   quest: {fileID: 0}

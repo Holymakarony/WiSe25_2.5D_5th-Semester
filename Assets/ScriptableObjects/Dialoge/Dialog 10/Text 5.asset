@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Text 5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Ruprecht
+  speakerSprite: {fileID: 645968958, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
   Text: "Dann wird das was jetzt kommt umso leichter f\xFCr mich du Goere!"
   quest: {fileID: 0}

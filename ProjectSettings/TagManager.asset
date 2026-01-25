@@ -13,6 +13,7 @@ TagManager:
   - EnterTrigger
   - QuestTrigger
   - GameManager
+  - DialoguePopUp
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,9 @@ public class DialoguePlayer : MonoBehaviour
     [SerializeField] private List<DialogueText> dialogueTexts;
     [SerializeField] private GameObject interactPrompt;
     [SerializeField] private GameObject popUpLeft;
+    [SerializeField] private GameObject speakerPortraitLeft;
     [SerializeField] private GameObject popUpRight;
+    [SerializeField] private GameObject speakerPortraitRight;
     [SerializeField] private GameObject gameManager;
 
     public bool dialogueIsPlaying;
@@ -106,12 +108,14 @@ public class DialoguePlayer : MonoBehaviour
             if (dialogueTexts[dialogueIndex].DisplayLeft == true)
             {
                 popUpLeft.SetActive(true);
+                GameObject.FindWithTag("DialoguePopUp").GetComponent<SpeakerImageScript>().changeLeftSpeakerImage(dialogueTexts[dialogueIndex].speakerSprite);
                 speakerLeft.SetText(dialogueTexts[dialogueIndex].SpeakerName);
                 popUpRight.SetActive(false);
             }
             else
             {
                 popUpRight.SetActive(true);
+                GameObject.FindWithTag("DialoguePopUp").GetComponent<SpeakerImageScript>().changeRightSpeakerImage(dialogueTexts[dialogueIndex].speakerSprite);
                 speakerRight.SetText(dialogueTexts[dialogueIndex].SpeakerName);
                 popUpLeft.SetActive(false);
             }

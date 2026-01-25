@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Text 7
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
   SpeakerName: Natalie
+  speakerSprite: {fileID: 2050929117, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
   Text: "Fuers erste solltet ihr euch wahrscheinlich um die k\xFCmmern."
   quest: {fileID: 0}
