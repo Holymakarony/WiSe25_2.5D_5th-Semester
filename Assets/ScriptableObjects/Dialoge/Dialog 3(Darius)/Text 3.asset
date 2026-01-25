@@ -15,6 +15,6 @@ MonoBehaviour:
   SpeakerName: Gretel
   speakerSprite: {fileID: -1075911777, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 1
-  Text: "Sie besteht darauf unschuldig zu sein, mehr wei\xDF ich bisher leider auch
-    nicht..."
+  Text: Sie besteht darauf unschuldig zu sein, mehr weiss ich bisher leider auch
+    nicht....
   quest: {fileID: 0}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quest
   Title: Konfrontiere den naechsten komischen Mann
   QuestType: 1
-  Desc: Konfrontiere den zweiten komischen Mann in Strumpfhose
+  Desc: Konfrontiere den zweiten komischen Mann in Strumpfhosen
   Target: Michel
   currentAmount: 0
   targetAmount: 1

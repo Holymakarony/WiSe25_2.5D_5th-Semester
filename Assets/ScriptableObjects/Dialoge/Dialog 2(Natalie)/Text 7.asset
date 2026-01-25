@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Natalie
   speakerSprite: {fileID: 2050929117, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
-  Text: ...
+  Text: ....
   quest: {fileID: 0}

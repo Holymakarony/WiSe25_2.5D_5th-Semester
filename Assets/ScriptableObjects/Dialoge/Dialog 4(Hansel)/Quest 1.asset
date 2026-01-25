@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quest
   Title: Besiege die Strohpuppe
   QuestType: 1
-  Desc: "\xDCbe einen Kampf an der Strohpuppe"
+  Desc: Uebe einen Kampf an der Strohpuppe
   Target: Strohpuppe
   currentAmount: 0
   targetAmount: 1

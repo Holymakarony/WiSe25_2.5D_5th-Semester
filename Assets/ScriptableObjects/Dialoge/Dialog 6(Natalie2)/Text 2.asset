@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Hans
   speakerSprite: {fileID: 477203961, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 1
-  Text: Hi, wir sind jetzt bereit um uns um dein Schlamassel zu kuemmern!
+  Text: Hi, wir sind jetzt bereit um uns um deinen Schlamassel zu kuemmern!!
   quest: {fileID: 0}

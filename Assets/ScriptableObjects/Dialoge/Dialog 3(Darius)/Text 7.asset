@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Darius
   speakerSprite: {fileID: -1854698576, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
-  Text: "Wenn du schon mal da bist kannst du ja gleich noch an einer Strohpuppe \xFCben."
+  Text: Wenn du schon mal da bist kannst du ja gleich noch an einer Strohpuppe ueben..
   quest: {fileID: 0}

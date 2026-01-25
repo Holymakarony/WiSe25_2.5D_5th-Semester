@@ -158,8 +158,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Roter Schleim
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6f2be688ff2b6384998587a2f9de66e7, type: 2}
+  m_sharedMaterial: {fileID: -9159622422789901583, guid: 6f2be688ff2b6384998587a2f9de66e7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -674,8 +674,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Lvl: 1'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6f2be688ff2b6384998587a2f9de66e7, type: 2}
+  m_sharedMaterial: {fileID: -9159622422789901583, guid: 6f2be688ff2b6384998587a2f9de66e7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

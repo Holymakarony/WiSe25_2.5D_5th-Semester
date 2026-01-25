@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Gretel
   speakerSprite: {fileID: -1075911777, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 1
-  Text: "Naja w\xE4re ja jetzt auch nicht das erste mal..."
+  Text: Naja waere ja jetzt auch nicht das erste mal....
   quest: {fileID: 0}

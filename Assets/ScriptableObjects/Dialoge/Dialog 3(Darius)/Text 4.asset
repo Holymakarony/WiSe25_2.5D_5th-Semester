@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Gretel
   speakerSprite: {fileID: -1075911777, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 1
-  Text: "Aber wei\xDFt du zuf\xE4llig wo mein Bruder ist?"
+  Text: Aber weisst du zufaellig wo mein Bruder ist??
   quest: {fileID: 0}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f847d14b8298f4b89cc8461b3cd2d1, type: 3}
   m_Name: Quest 1
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  Title: Finde Hansel
+  Title: Finde Hans
   QuestType: 2
-  Desc: "Such Hansel auf dem \xDCbungsplatz im Norden und trainiere an einer Strohpuppe"
+  Desc: Such Hans auf dem Ueungsplatz im Norden und trainiere an einer Strohpuppe
   Target: Hansel
   currentAmount: 0
   targetAmount: 1

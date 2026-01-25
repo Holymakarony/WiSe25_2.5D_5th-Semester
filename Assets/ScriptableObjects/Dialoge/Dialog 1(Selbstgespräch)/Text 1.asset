@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Gretel
   speakerSprite: {fileID: -1075911777, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 1
-  Text: "Hm, das sieht bedenklich aus, ich sollte wirklich schnell mit Natalie sprechen\u2026"
+  Text: "Hm, das sieht bedenklich aus, ich sollte wirklich schnell mit Natalie sprechen\u2026."
   quest: {fileID: 11400000, guid: 8d4f1e9b17b45cf41bf7a3140855fde9, type: 2}

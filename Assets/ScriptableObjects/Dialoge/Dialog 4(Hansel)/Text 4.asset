@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Hans
   speakerSprite: {fileID: 477203961, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
-  Text: Dann los, wir sollten besser keine Zeit verlieren!
+  Text: Dann los, wir sollten besser keine Zeit verlieren!!
   quest: {fileID: 11400000, guid: a699a9e499360eb43b24ccd743723e4b, type: 2}

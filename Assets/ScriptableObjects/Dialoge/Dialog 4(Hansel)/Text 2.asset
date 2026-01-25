@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Hans
   speakerSprite: {fileID: 477203961, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
-  Text: Was du nicht sagst Schwesterherz...
+  Text: Was du nicht sagst Schwesterherz....
   quest: {fileID: 0}

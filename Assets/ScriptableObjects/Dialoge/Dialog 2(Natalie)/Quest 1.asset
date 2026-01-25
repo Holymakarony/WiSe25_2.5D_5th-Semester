@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quest
   Title: Geh mit Darius sprechen
   QuestType: 2
-  Desc: "Sprich mit Darius auf dem gro\xDFen Platz im Osten"
+  Desc: Sprich mit Darius auf dem grossen Platz im Osten
   Target: Darius
   currentAmount: 0
   targetAmount: 0

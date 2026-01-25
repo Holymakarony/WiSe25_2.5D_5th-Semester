@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Ruprecht
   speakerSprite: {fileID: 645968958, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
-  Text: So so so...
+  Text: So so so....
   quest: {fileID: 0}

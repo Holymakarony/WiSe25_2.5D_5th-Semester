@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Ruprecht
   speakerSprite: {fileID: 645968958, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
-  Text: Naja viel mehr war auch nicht von dieser mittelmaessigen Hexe zu erwarten.
+  Text: Naja viel mehr war auch nicht von dieser mittelmaessigen Hexe zu erwarten....
   quest: {fileID: 0}

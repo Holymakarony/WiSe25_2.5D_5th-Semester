@@ -15,5 +15,5 @@ MonoBehaviour:
   SpeakerName: Natalie
   speakerSprite: {fileID: 2050929117, guid: 6bc87f9a3a175fd4c994c88b09be3244, type: 3}
   DisplayLeft: 0
-  Text: Wenn du Hansel gefunden hast, geht zusammen erforschen was hier los ist!
+  Text: Wenn du Hans gefunden hast, geht zusammen erforschen was hier los ist!!
   quest: {fileID: 11400000, guid: e97e261cab592db4eb6bbc7694eed6b6, type: 2}
