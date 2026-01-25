@@ -6,6 +6,11 @@ public class ColorShift : MonoBehaviour
 {
     public static ColorShift Instance { get; private set; }
 
+    public AudioClip Door;
+    public AudioClip Thunder;
+
+    [SerializeField] private AudioSource _audioSource;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -29,6 +34,7 @@ public class ColorShift : MonoBehaviour
     // start anim
     public float changePerSecond = 1f;
     public bool playAnim = false;
+
 
     void Start()
     {
@@ -77,5 +83,15 @@ public class ColorShift : MonoBehaviour
     public void PlayStartAnimation()
     {
         anim.SetTrigger(PLAY_START_PARAM);
+    }
+
+    public void PlayDoor()
+    {
+        _audioSource.PlayOneShot(Door);
+    }
+
+    public void PlayThunder()
+    {
+        _audioSource.PlayOneShot(Thunder);
     }
 }
