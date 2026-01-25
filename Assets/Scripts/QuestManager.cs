@@ -103,8 +103,7 @@ public class QuestManager : MonoBehaviour
 
     private void DelayQuest()
     {
-        if (activeQuests.Count < 3)
-        {
+            activeQuests.Clear();
             activeQuests.Add(newQuest);
             newQuest.currentAmount = 0;
             // PopUp with Quest Title
@@ -116,7 +115,7 @@ public class QuestManager : MonoBehaviour
             QuestCornerDescription.text = newQuest.Desc;
 
             PlaySound(QuestAcceptedSound);
-        }
+        
     }
 
     public void ClearQuestQueue()
