@@ -112,6 +112,17 @@
                 },
                 {
                     "name": "",
+                    "id": "20d485e8-30e5-481f-b8d6-b540e86dd482",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0a7579c0-190d-403b-8d0a-73ad1627969a",
                     "path": "<Keyboard>/shift",
                     "interactions": "",

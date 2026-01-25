@@ -3,7 +3,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
-
+// wtf
 public class BattleSystem : MonoBehaviour
 {
     [SerializeField] private enum BattleState {Start, Selection, Battle, Won, Lost, Run}
@@ -37,7 +37,7 @@ public class BattleSystem : MonoBehaviour
     private const string RUN_MESSAGE_SUCCES = "Du bist davongelaufen!";
     private const string RUN_MESSAGE_FAIL = "Du kannst jetzt nicht wegrennen...";
     private const int TURN_DURATION = 2;
-    private const int RUN_CHANCE = 50;
+    private const int RUN_CHANCE = 0;
     private const string OVERWORLD_SCENE = "OverworldScene";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -135,6 +135,12 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.Won;
                 bottomText.text = WIN_MESSAGE;
                 yield return new WaitForSeconds(TURN_DURATION); // wait
+
+                if (GameObject.FindAnyObjectByType<GameManager>().currentForcedEncounter != null)
+                {
+                    GameObject.FindFirstObjectByType<GameManager>().ForcedEnounterCompleted(GameObject.FindFirstObjectByType<GameManager>().currentForcedEncounter);
+                }
+
                 SceneManager.LoadScene(OVERWORLD_SCENE);
             }
         }
@@ -161,8 +167,16 @@ public class BattleSystem : MonoBehaviour
                     bottomText.text = LOSE_MESSAGE;
                     yield return new WaitForSeconds(TURN_DURATION); // wait
                     Debug.Log("Game Over!");
+
+                    if (GameObject.FindAnyObjectByType<GameManager>().currentForcedEncounter != null)
+                    {
+                        GameObject.FindAnyObjectByType<GameManager>().RemoveCompletedDialogue(GameObject.FindAnyObjectByType<GameManager>().currentForcedEncounter);
+                    }
+
                     SceneManager.LoadScene(OVERWORLD_SCENE);
-                    
+                    // re-adds gretel to party if lost + respawn her infront of house
+                    partyManager.ReAddDefaultMember();
+                    partyManager.SetPosition(Vector3.zero);
                     
                 }
             }
@@ -180,6 +194,12 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.Run;
                 allBattlers.Clear();
                 yield return new WaitForSeconds(TURN_DURATION);
+
+                if (GameObject.FindAnyObjectByType<GameManager>().currentForcedEncounter != null)
+                    {
+                        GameObject.FindAnyObjectByType<GameManager>().RemoveCompletedDialogue(GameObject.FindAnyObjectByType<GameManager>().currentForcedEncounter);
+                    }
+
                 SceneManager.LoadScene(OVERWORLD_SCENE);
             }
             else

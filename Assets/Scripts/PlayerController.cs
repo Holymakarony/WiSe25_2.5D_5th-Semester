@@ -63,6 +63,7 @@ public class CS_PlayerController : MonoBehaviour
         {
             transform.position = partyManager.GetPosition(); // move player to saved position
         }
+        GameObject.FindAnyObjectByType<GameManager>().currentForcedEncounter = null;
     }
 
     // Update is called once per frame

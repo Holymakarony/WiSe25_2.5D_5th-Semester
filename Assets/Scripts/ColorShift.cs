@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -21,21 +20,62 @@ public class ColorShift : MonoBehaviour
 
     private Component GlobalVolume;
     private ColorAdjustments _colorAdjustments;
-    private float StartSaturation = -100f;
+    private float StartSaturation = -80f;
     private float currentSaturation;
+    private Animator anim;
+
+    private const string PLAY_START_PARAM = "PlayStart";
+
+    // start anim
+    public float changePerSecond = 1f;
+    public bool playAnim = false;
 
     void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
         GetComponent<Volume>().profile.TryGet<ColorAdjustments>(out _colorAdjustments);
-        _colorAdjustments.saturation.Override(-100f);
-        currentSaturation = -100f;
+        currentSaturation = _colorAdjustments.saturation.value;
+    }
+
+    public void Update()
+    {
+        if (playAnim && currentSaturation > -80f)
+        {
+            _colorAdjustments.saturation.Override(currentSaturation - changePerSecond * Time.deltaTime);
+            currentSaturation = _colorAdjustments.saturation.value;
+        }
+        else if (currentSaturation <= -80f)
+        {
+            playAnim = false; 
+        }
     }
 
     public void UpdateSaturation()
     {
         currentSaturation = _colorAdjustments.saturation.value;
         // GameObject.FindFirstObjectByType<PartyManager>().savedSaturation = currentSaturation + 66f;
-        _colorAdjustments.saturation.Override(currentSaturation + 66f);
+        _colorAdjustments.saturation.Override(currentSaturation + 60f);
         
+    }
+
+    public void StartAnimation()
+    {
+        GameObject.FindWithTag("Player").GetComponent<CS_PlayerController>().SetCanMove(false);
+        playAnim = true;
+    }
+
+    public void StopAnimation()
+    {
+        GameObject.FindWithTag("Player").GetComponent<CS_PlayerController>().SetCanMove(true);
+    }
+
+    public void PlaySound()
+    {
+        // hier tür sound und explosion oder so idk
+    }
+
+    public void PlayStartAnimation()
+    {
+        anim.SetTrigger(PLAY_START_PARAM);
     }
 }

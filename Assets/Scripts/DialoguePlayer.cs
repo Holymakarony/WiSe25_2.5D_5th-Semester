@@ -19,18 +19,17 @@ public class DialoguePlayer : MonoBehaviour
     [SerializeField] private GameObject popUpRight;
     [SerializeField] private GameObject gameManager;
 
-    private bool dialogueIsPlaying;
+    public bool dialogueIsPlaying;
     private int dialogueIndex = 0; 
     
     public bool canDisplayDialogue = true;
-
     public float WaitForSeconds = 1.5f;
 
     public UnityEvent dialogueEvent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
 
     // Update is called once per frame
@@ -48,7 +47,7 @@ public class DialoguePlayer : MonoBehaviour
             dialogueIndex = 0;
             DisplayDialogue();
         }
-        else if (dialogueIsPlaying = true)
+        else if (dialogueIsPlaying == true)
         {
             if (typeWriter.IsTyping)
             {
@@ -71,6 +70,8 @@ public class DialoguePlayer : MonoBehaviour
         dialoguePopUp.SetActive(false);
         dialogueIsPlaying = false; 
 
+        GameObject.FindFirstObjectByType<CharacterManager>().ResetDialogueReferences();
+
         GameObject.FindGameObjectWithTag("Player")
             .GetComponent<CS_PlayerController>()
             .SetCanMove(true);
@@ -87,12 +88,12 @@ public class DialoguePlayer : MonoBehaviour
         canDisplayDialogue = false;
 
         if (interactPrompt)
-            interactPrompt.SetActive(false);
-
-        dialogueEvent.Invoke();
+            {interactPrompt.SetActive(false);}
 
         gameManager.GetComponent<GameManager>()
             .DialogueCompleted(gameObject.name);
+        
+        dialogueEvent.Invoke();
     }
 
     public void DisplayDialogue()

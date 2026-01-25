@@ -11,7 +11,10 @@ public class ForcedEnemyEncounter : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (GameObject.FindFirstObjectByType<GameManager>().GetComponent<GameManager>().CompletedForcedEncounters.Contains(gameObject.name))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -22,8 +25,10 @@ public class ForcedEnemyEncounter : MonoBehaviour
 
     public void generateForcedEncounter()
     {
+        GameObject.FindFirstObjectByType<GameManager>().currentForcedEncounter = gameObject.name;
         enemyManager = GameObject.FindFirstObjectByType<EnemeyManager>();
-        enemyManager.GenerateEnemiesByEncounter(enemyEncounter, maxAmountEnemies);
+        enemyManager.GenerateFixedEnemyEncounter(enemyEncounter, maxAmountEnemies);
+        FindFirstObjectByType<CS_PlayerController>().LoadBattleScene();
     }
 
     public void ShowInteractPrompt(bool showPrompt)

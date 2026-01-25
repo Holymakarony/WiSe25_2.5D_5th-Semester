@@ -28,7 +28,7 @@ public class CharacterManager : MonoBehaviour
     private bool infrontOfDialogue;
     private bool inDialogueTrigger;
     [AllowNull]private GameObject dialogueMember;
-    private GameObject dialogueTrigger;
+    [AllowNull]private GameObject dialogueTrigger;
 
     private bool infrontOfHouse;
     
@@ -66,24 +66,39 @@ public class CharacterManager : MonoBehaviour
         
     }
 
+    public void ResetDialogueReferences()
+    {
+        infrontOfDialogue = false;
+        inDialogueTrigger = false;
+
+        if (dialogueMember)
+        {
+            dialogueMember = null;
+        }
+        if (dialogueTrigger)
+        {
+            dialogueTrigger = null;
+        }
+    }
+
     private void Interact()
     {
-        if (infrontOfPartyMember == true && joinableMember != null)
+        /*if (infrontOfPartyMember == true && joinableMember != null)
         {
             MemberJoined(joinableMember.GetComponent<JoinableCharacter>().MemberToJoin); // add member
             infrontOfPartyMember = false;
             joinableMember = null;
 
-        }
+        }*/
         // Dialoge Prototype
-        else if (infrontOfDialogue == true)
+        if (infrontOfDialogue == true)
         {
             if (dialogueMember.GetComponent<DialoguePlayer>().canDisplayDialogue == true)
             {
                 dialogueMember.GetComponent<DialoguePlayer>().PlayDialogue();
             }
         }
-        else if (infrontOfEnemy == true)
+        /*else if (infrontOfEnemy == true)
         {
             forcedEnemy.GetComponent<ForcedEnemyEncounter>().generateForcedEncounter();
             FindFirstObjectByType<CS_PlayerController>().LoadBattleScene();
@@ -91,7 +106,7 @@ public class CharacterManager : MonoBehaviour
         else if (infrontOfHouse == true)
         {
             FindFirstObjectByType<CS_PlayerController>().LoadGretelHouse();
-        }
+        }*/
         else if (inDialogueTrigger == true)
         {
             if (dialogueTrigger.GetComponent<DialoguePlayer>().canDisplayDialogue == true) 
@@ -107,7 +122,7 @@ public class CharacterManager : MonoBehaviour
         FindFirstObjectByType<CS_PlayerController>().SetCanMove(false);
     }
 
-    private void MemberJoined(PartyMemberInfo partyMember)
+    public void MemberJoined(PartyMemberInfo partyMember)
     {
         GameObject.FindFirstObjectByType<PartyManager>().AddMemberToPartyByName(partyMember.MemberName); // add party member
         joinableMember.GetComponent<JoinableCharacter>().CheckIfJoined(); // disable joinable member overworld object
@@ -159,19 +174,23 @@ public class CharacterManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.gameObject.tag == NPC_JOINABLE_TAG)
+        /*if (other.gameObject.tag == NPC_JOINABLE_TAG)
         {
             // enable Interact Prompt
             infrontOfPartyMember = true;
             joinableMember = other.gameObject;
             joinableMember.GetComponent<JoinableCharacter>().ShowInteractPrompt(true);
-        }
+        }*/
         // Dialogue Prototype
-        else if (other.gameObject.tag == NPC_DIALOGUE)
+        if (other.gameObject.tag == NPC_DIALOGUE)
         {
             infrontOfDialogue = true;
             dialogueMember = other.gameObject;
             dialogueMember.GetComponent<DialoguePlayer>().ShowInteractPrompt(true);
+            if(other.name == "JoinableCharacter")
+            {
+                joinableMember = other.gameObject;
+            }
         }
 
         else if(other.gameObject.tag == "PickUp")
@@ -182,7 +201,7 @@ public class CharacterManager : MonoBehaviour
             Destroy(other.gameObject);
         }
         // Forced Enemy Prototype
-        else if(other.gameObject.tag == "ForcedEnemy")
+        /*else if(other.gameObject.tag == "ForcedEnemy")
         {
             infrontOfEnemy = true;
             forcedEnemy = other.gameObject;
@@ -193,7 +212,7 @@ public class CharacterManager : MonoBehaviour
         {
             infrontOfHouse = true;
         }
-
+        */
         else if (other.gameObject.tag == "EnterTrigger")
         {
             inDialogueTrigger = true;
@@ -209,22 +228,26 @@ public class CharacterManager : MonoBehaviour
 
     private void OnTriggerExit(Collider other) 
     {
-        if (other.gameObject.tag == NPC_JOINABLE_TAG)
+        /*if (other.gameObject.tag == NPC_JOINABLE_TAG)
         {
             // disable Interact Prompt
             infrontOfPartyMember = false;
             joinableMember.GetComponent<JoinableCharacter>().ShowInteractPrompt(false);
             joinableMember = null;
-        }
+        }*/
         // Dialogue Prototype
-        else if (other.gameObject.tag == NPC_DIALOGUE)
+        if (other.gameObject.tag == NPC_DIALOGUE)
         {
             infrontOfDialogue = false;
             other.gameObject.GetComponent<DialoguePlayer>().ShowInteractPrompt(false);
             dialogueMember = null;
+            if(other.name == "JoinableCharacter")
+            {
+                joinableMember = null;
+            }
         }
         // Forced Enemy Prototype
-        else if(other.gameObject.tag == "ForcedEnemy")
+        /*else if(other.gameObject.tag == "ForcedEnemy")
         {
             infrontOfEnemy = false;
             forcedEnemy.GetComponent<ForcedEnemyEncounter>().ShowInteractPrompt(false);
@@ -235,7 +258,7 @@ public class CharacterManager : MonoBehaviour
         {
             infrontOfHouse = false;
         }
-
+        */
         else if (other.gameObject.tag == "EnterTrigger")
         {
             inDialogueTrigger = false;

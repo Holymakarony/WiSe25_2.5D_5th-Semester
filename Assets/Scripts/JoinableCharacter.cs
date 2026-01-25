@@ -33,6 +33,11 @@ public class JoinableCharacter : MonoBehaviour
             {
                 gameObject.SetActive(false);
             }
+            else 
+            {
+                gameObject.SetActive(true);
+                FindFirstObjectByType<GameManager>().RemoveCompletedDialogue(gameObject.name);
+            }
         }
     }
 }

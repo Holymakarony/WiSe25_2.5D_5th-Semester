@@ -27,6 +27,12 @@ public class PartyManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    // nur dafür da im death state Gretel zu re-adden!!
+    public void ReAddDefaultMember()
+    {
+        currentParty[0].CurrentHealth = currentParty[0].MaxHealth;
+    }
+
     public void AddMemberToPartyByName(string memberName)
     {
         for (int i = 0; i < allMembers.Length; i++)

@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] public List<String> CompletedDialoguePlayerNames;
+    [SerializeField] public List<String> CompletedForcedEncounters;
 
     private static GameObject instance;
+
+    [AllowNull]public string currentForcedEncounter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,8 +33,18 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void ForcedEnounterCompleted(String EncounterName)
+    {
+        CompletedForcedEncounters.Add(EncounterName);
+    }
+
     public void DialogueCompleted(String DialoguePlayerName)
     {
         CompletedDialoguePlayerNames.Add(DialoguePlayerName);
+    }
+
+    public void RemoveCompletedDialogue(String DialoguePlayerName)
+    {
+        CompletedDialoguePlayerNames.Remove(DialoguePlayerName);
     }
 }

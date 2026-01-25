@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject CreditsMenuUI;
     [SerializeField] private GameObject playerController;
     [SerializeField] private GameObject questManager; 
+    [SerializeField] private GameObject globalVolume;
 
     void Start()
     {
@@ -41,6 +42,10 @@ public class MainMenu : MonoBehaviour
     private void OnStartClicked()
     {
         playerController.GetComponent<CS_PlayerController>().SetCanMove(true);
+        if (questManager.GetComponent<QuestManager>().showMainMenu == true)
+        {
+            globalVolume.GetComponent<ColorShift>().PlayStartAnimation();
+        }
         questManager.GetComponent<QuestManager>().showMainMenu = false;
         gameObject.SetActive(false);
     }

@@ -38,6 +38,19 @@ public class EnemeyManager : MonoBehaviour
         }
     }
 
+    public void GenerateFixedEnemyEncounter(Encounter[] encounters, int maxNumEnemies)
+    {
+        currentEnemies.Clear();
+        int numEnemies = maxNumEnemies;
+        
+        for (int i = 0; i < numEnemies; i++)
+        {
+            Encounter tempEncounter = encounters[i];
+            int level = Random.Range(tempEncounter.LevelMin, tempEncounter.LevelMax);
+            GenerateEnemyByName(tempEncounter.Enemy.EnemyName, level);
+        }
+    }
+
     private void GenerateEnemyByName(string enemyName, int level)
     {
         for (int i = 0; i < allEnemies.Length; i++)
