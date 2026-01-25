@@ -14557,10 +14557,10 @@ MonoBehaviour:
   defeatedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2030907816}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2030907818}
+        m_TargetAssemblyTypeName: DeactivateSelfScript, Assembly-CSharp
+        m_MethodName: DeactivateSelf
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18023,10 +18023,10 @@ MonoBehaviour:
   dialogueEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 905224317}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 905224318}
+        m_TargetAssemblyTypeName: DeactivateSelfScript, Assembly-CSharp
+        m_MethodName: DeactivateSelf
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -19120,16 +19120,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1776017313405982177, guid: 3cbad9e868ea2d14ca8bbd73086b83ed, type: 3}
   m_PrefabInstance: {fileID: 290328358}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &291235771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8955205465866244930, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
-  m_PrefabInstance: {fileID: 1782599637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &291235772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8658555905394082897, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
   m_PrefabInstance: {fileID: 1782599637}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &291235773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1141952281068652714, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
+  m_PrefabInstance: {fileID: 1782599637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3e774b80beedf4f8bbe7b711aaf43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeactivateSelfScript
 --- !u!1 &291450989
 GameObject:
   m_ObjectHideFlags: 0
@@ -24722,11 +24728,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2012043566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &379167203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8955205465866244930, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
+--- !u!114 &379167204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1141952281068652714, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
   m_PrefabInstance: {fileID: 642555978}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3e774b80beedf4f8bbe7b711aaf43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeactivateSelfScript
 --- !u!1001 &381200735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58819,11 +58831,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
---- !u!1 &905224317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8955205465866244930, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
+--- !u!114 &905224318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1141952281068652714, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
   m_PrefabInstance: {fileID: 905224316}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3e774b80beedf4f8bbe7b711aaf43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeactivateSelfScript
 --- !u!1001 &906859343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83386,16 +83404,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1281627709 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8955205465866244930, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
-  m_PrefabInstance: {fileID: 1937586035}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1281627710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8658555905394082897, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
   m_PrefabInstance: {fileID: 1937586035}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1281627711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1141952281068652714, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
+  m_PrefabInstance: {fileID: 1937586035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3e774b80beedf4f8bbe7b711aaf43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeactivateSelfScript
 --- !u!1 &1282232510
 GameObject:
   m_ObjectHideFlags: 0
@@ -93801,16 +93825,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2012043566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1454929206 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8955205465866244930, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
-  m_PrefabInstance: {fileID: 1115726994}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1454929207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8658555905394082897, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
   m_PrefabInstance: {fileID: 1115726994}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1454929208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1141952281068652714, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
+  m_PrefabInstance: {fileID: 1115726994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3e774b80beedf4f8bbe7b711aaf43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeactivateSelfScript
 --- !u!1 &1458025396
 GameObject:
   m_ObjectHideFlags: 0
@@ -116991,10 +117021,10 @@ MonoBehaviour:
   defeatedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 379167203}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 379167204}
+        m_TargetAssemblyTypeName: DeactivateSelfScript, Assembly-CSharp
+        m_MethodName: DeactivateSelf
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -117003,10 +117033,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1281627709}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1281627711}
+        m_TargetAssemblyTypeName: DeactivateSelfScript, Assembly-CSharp
+        m_MethodName: DeactivateSelf
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -136907,10 +136937,10 @@ MonoBehaviour:
   defeatedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1454929206}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1454929208}
+        m_TargetAssemblyTypeName: DeactivateSelfScript, Assembly-CSharp
+        m_MethodName: DeactivateSelf
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -136919,10 +136949,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 291235771}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 291235773}
+        m_TargetAssemblyTypeName: DeactivateSelfScript, Assembly-CSharp
+        m_MethodName: DeactivateSelf
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -143803,16 +143833,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2012043566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2030907816 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8955205465866244930, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
-  m_PrefabInstance: {fileID: 1214796374}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2030907817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8658555905394082897, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
   m_PrefabInstance: {fileID: 1214796374}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2030907818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1141952281068652714, guid: 3ed9a059f0695cb40b0f518485a91624, type: 3}
+  m_PrefabInstance: {fileID: 1214796374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3e774b80beedf4f8bbe7b711aaf43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeactivateSelfScript
 --- !u!1 &2031970684
 GameObject:
   m_ObjectHideFlags: 0
