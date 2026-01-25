@@ -97,8 +97,11 @@ public class QuestManager : MonoBehaviour
     
     public void AddNewQuest(Quest quest, float WaitForSeconds)
     {
-        newQuest = quest;
-        Invoke("DelayQuest", WaitForSeconds);       
+        if (!GameObject.FindWithTag("GameManager").GetComponent<GameManager>().DeactivatedQuests.Contains(quest.name))
+        {
+            newQuest = quest;
+            Invoke("DelayQuest", WaitForSeconds);
+        }       
     }
 
     private void DelayQuest()
@@ -126,6 +129,7 @@ public class QuestManager : MonoBehaviour
             // Popup with Quest Title
             for (int i = 0; i < completedQuestQueue.Count; i++)
             {
+                GameObject.FindWithTag("GameManager").GetComponent<GameManager>().DeactivatedQuests.Add(completedQuestQueue[i].name);
                 PopUp.SetActive(true);
                 PopUpText.text = completedQuestQueue[i].Title + COMPLETED_MESSAGE;
                 completedQuestQueue.Remove(completedQuestQueue[i]);

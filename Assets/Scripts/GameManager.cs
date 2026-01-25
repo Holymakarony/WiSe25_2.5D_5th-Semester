@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public List<String> CompletedDialoguePlayerNames;
     [SerializeField] public List<String> CompletedForcedEncounters;
     [SerializeField] public List<String> DeactivatedBarriers;
+    [SerializeField] public List<String> DeactivatedQuests;
 
     private static GameObject instance;
 
