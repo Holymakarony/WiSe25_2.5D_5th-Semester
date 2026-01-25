@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9f847d14b8298f4b89cc8461b3cd2d1, type: 3}
-  m_Name: Quest 1
+  m_Name: KillBoss
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  Title: Sprich mit Natalie
-  QuestType: 2
-  Desc: Sprich mit Natalie am Tor im Westen des Dorfes
-  Target: Natalie2
+  Title: Besiege Ruprecht...
+  QuestType: 1
+  Desc: Besiege Ruprecht am Turm im Norden
+  Target: Ruprecht
   currentAmount: 0
   targetAmount: 1

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9f847d14b8298f4b89cc8461b3cd2d1, type: 3}
-  m_Name: QuestNatalie3
+  m_Name: TalkNatalie2
   m_EditorClassIdentifier: Assembly-CSharp::Quest
   Title: Sprich mit Natalie
   QuestType: 2
-  Desc: Sprich auf dem Weg nach Hause noch einmal mit Natalie.
-  Target: Natalie3
+  Desc: Sprich mit Natalie am Tor im Westen des Dorfes
+  Target: Natalie2
   currentAmount: 0
   targetAmount: 1

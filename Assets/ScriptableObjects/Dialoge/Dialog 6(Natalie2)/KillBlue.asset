@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9f847d14b8298f4b89cc8461b3cd2d1, type: 3}
-  m_Name: Quest 1
+  m_Name: KillBlue
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  Title: Besiege die Strohpuppe
+  Title: Konfrontiere den merkwuerdigen Mann
   QuestType: 1
-  Desc: Uebe einen Kampf an der Strohpuppe
-  Target: Strohpuppe
+  Desc: Konfrontiere den merkwuerdigen blauen Typen in Strumpfhosen
+  Target: Kunz
   currentAmount: 0
   targetAmount: 1
