@@ -14581,6 +14581,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 209889523}
+        m_TargetAssemblyTypeName: DialoguePlayer, Assembly-CSharp
+        m_MethodName: AddNewQuest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2affdec3c97e16749ac518d6085d3d00, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Quest, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!95 &209889520
 Animator:
   serializedVersion: 7
@@ -22459,6 +22471,7 @@ MonoBehaviour:
   CompletedDialoguePlayerNames: []
   CompletedForcedEncounters: []
   DeactivatedBarriers: []
+  DeactivatedQuests: []
   currentForcedEncounter: 
 --- !u!4 &333441394
 Transform:
@@ -61442,6 +61455,18 @@ MonoBehaviour:
   defeatedEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 270366040}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 739796663}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
