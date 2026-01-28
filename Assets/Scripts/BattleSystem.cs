@@ -75,7 +75,7 @@ public class BattleSystem : MonoBehaviour
     
     private IEnumerator BattleRoutine()
     {
-        someoneHasPriority = false;
+        //someoneHasPriority = false;
         enemySelectionMenu.SetActive(false); // enemy selection menu disabled
         enemySpecialSelectionMenu.SetActive(false); // enemy special selection menu disabled
         state = BattleState.Battle; // change our state to the battle state
@@ -89,7 +89,7 @@ public class BattleSystem : MonoBehaviour
                 switch (allBattlers[i].BattleAction)
                 {
                     case BattleEntities.Action.Attack:
-                        if(someoneHasPriority && allBattlers[i].IsPlayer){allBattlers[i].ReSetTarget(allBattlers[i].Target);}
+                        //if(someoneHasPriority && allBattlers[i].IsPlayer){allBattlers[i].ReSetTarget(allBattlers[i].Target);}
                         yield return StartCoroutine(AttackRoutine(i));
                         break;
                     case BattleEntities.Action.Run:
@@ -100,7 +100,7 @@ public class BattleSystem : MonoBehaviour
                         yield return StartCoroutine(HealRoutine(i));
                         break;
                     case BattleEntities.Action.SpecialAttack:
-                        if(someoneHasPriority && allBattlers[i].IsPlayer){allBattlers[i].ReSetTarget(allBattlers[i].Target);}
+                        //if(someoneHasPriority && allBattlers[i].IsPlayer){allBattlers[i].ReSetTarget(allBattlers[i].Target);}
                         yield return StartCoroutine(SpecialAttackRoutine(i));
                         break;
                     case BattleEntities.Action.Block:
@@ -262,7 +262,7 @@ public class BattleSystem : MonoBehaviour
         {
             allBattlers[i].IsBlocking = true;
             allBattlers[i].BattleVisuals.PlayBlockAnimation();
-            bottomText.text = string.Format("{0} blockt den nächsten Angriff.", allBattlers[i].Name);
+            bottomText.text = string.Format("{0} blockt den naechsten Angriff.", allBattlers[i].Name);
             yield return new WaitForSeconds(TURN_DURATION);
         }
     }
@@ -543,14 +543,14 @@ public class BattleSystem : MonoBehaviour
     {
         allBattlers.Sort((bi1, bi2) => -bi1.Initiative.CompareTo(bi2.Initiative)); // sorts list by initiative starting from highest
 
-        for (int i = 0; i < allBattlers.Count; i++)
+        /*for (int i = 0; i < allBattlers.Count; i++)
         {
             if(allBattlers[i].GetsPriority == true)
             {
                 allBattlers[i].GetsPriority = false;
                 allBattlers[i].Initiative /= 20;
             }
-        }
+        }*/
     }
 
     public void SelectRunAction()
@@ -584,8 +584,8 @@ public class BattleSystem : MonoBehaviour
         BattleEntities currentPlayerEntity = playerBattlers[currentPlayer];
         // tell battle system member wants to run
         currentPlayerEntity.BattleAction = BattleEntities.Action.Heal;
-        currentPlayerEntity.GetsPriority = true;
-        currentPlayerEntity.Initiative *= 20;
+        //currentPlayerEntity.GetsPriority = true;
+        //currentPlayerEntity.Initiative *= 20;
         battleMenu.SetActive(false);
         // increment through all party members 
         currentPlayer++;
@@ -608,8 +608,8 @@ public class BattleSystem : MonoBehaviour
         // set current members target
         BattleEntities currentPlayerEntity = playerBattlers[currentPlayer];
         currentPlayerEntity.BattleAction = BattleEntities.Action.Block;
-        currentPlayerEntity.GetsPriority = true;
-        currentPlayerEntity.Initiative *= 20;
+        //currentPlayerEntity.GetsPriority = true;
+        //currentPlayerEntity.Initiative *= 20;
         battleMenu.SetActive(false);
         // increment through all party members 
         currentPlayer++;

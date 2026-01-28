@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quest
   Title: Finde Hans
   QuestType: 2
-  Desc: Such Hans auf dem Ueungsplatz im Norden und trainiere an einer Strohpuppe
+  Desc: Such Hans auf dem Uebungsplatz im Norden und trainiere an einer Strohpuppe
   Target: Hansel
   currentAmount: 0
   targetAmount: 1

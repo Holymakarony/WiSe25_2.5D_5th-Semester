@@ -158,8 +158,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Kunz
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6f2be688ff2b6384998587a2f9de66e7, type: 2}
-  m_sharedMaterial: {fileID: -9159622422789901583, guid: 6f2be688ff2b6384998587a2f9de66e7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
+  m_sharedMaterial: {fileID: 384827774709660848, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -733,8 +733,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Lvl: 1'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6f2be688ff2b6384998587a2f9de66e7, type: 2}
-  m_sharedMaterial: {fileID: -9159622422789901583, guid: 6f2be688ff2b6384998587a2f9de66e7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
+  m_sharedMaterial: {fileID: 384827774709660848, guid: 4776311f857dedb4eaa26cd9544e6695, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
