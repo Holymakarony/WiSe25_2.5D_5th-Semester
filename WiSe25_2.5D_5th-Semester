@@ -1,0 +1,15 @@
+# WiSe25 2.5D – Softwareentwicklung & Vektormathematik
+
+Dieses Projekt im 5. Semester meiner Ausbildung an der htk academy widmet sich der logischen Verknüpfung und mathematischen Berechnung komplexer Abläufe in einem mehrdimensionalen Raum.
+
+## 🛠️ Technische Highlights & Software-Konzepte
+* **Mathematisch-analytische Logik:** Praktische Anwendung von Vektorberechnungen, Trigonometrie und Koordinatentransformationen im dreidimensionalen Raum zur präzisen Systemsteuerung.
+* **Komponentenbasierte Entwicklung:** Erstellung modularer, wiederverwendbarer Softwarekomponenten, die unabhängig voneinander getestet und erweitert werden können.
+* **Systematisches Debugging:** Effiziente Fehlerdiagnose („Bug-Hunting“) und Performance-Optimierung durch Laufzeitanalysen direkt in der Entwicklungsumgebung.
+* **Agile Versionskontrolle:** Strukturierte Code-Verwaltung und saubere Commit-Historie mittels Git zur Simulation professioneller Team-Workflows.
+
+## 🚀 Technologien & Tools
+* **Programmiersprache:** C#
+* **Plattform/Engine:** Unity (2.5D-Infrastruktur)
+* **Versionskontrolle:** Git / GitHub
+* **Entwicklungsumgebung:** Visual Studio / Visual Studio Code
